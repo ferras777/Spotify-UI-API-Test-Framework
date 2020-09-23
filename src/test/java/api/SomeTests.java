@@ -1,5 +1,6 @@
 package api;
 
+import api.bodies.ResponseBody;
 import org.testng.annotations.Test;
 
 public class SomeTests {
@@ -7,7 +8,8 @@ public class SomeTests {
 
     @Test
     public void statusCodeTest() {
-        Requests.getLookUp(specifications.requestSpecificationLookUp, "ball");
+        ResponseBody response = Requests.getLookUp(specifications.requestSpecificationLookUp, "ball",
+                specifications.responseSpecification).as(ResponseBody.class);
     }
 
     @Test
