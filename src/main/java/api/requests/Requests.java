@@ -1,4 +1,4 @@
-package api.bodies.requests;
+package api.requests;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

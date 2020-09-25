@@ -1,8 +1,8 @@
 package api;
 
 import api.bodies.artist.ArtistBody;
-import api.bodies.requests.Requests;
-import api.bodies.specifications.Specifications;
+import api.requests.Requests;
+import api.specifications.Specifications;
 import org.testng.annotations.Test;
 
 public class SomeTests {
