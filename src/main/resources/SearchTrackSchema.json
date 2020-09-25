@@ -1,0 +1,1193 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "tracks": {
+        "href": "https://api.spotify.com/v1/search?query=bohemian&type=track&market=RU&offset=0&limit=1",
+        "items": [
+          {
+            "album": {
+              "album_type": "album",
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                  "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                  "name": "Queen",
+                  "type": "artist",
+                  "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                }
+              ],
+              "external_urls": {
+                "spotify": "https://open.spotify.com/album/1GbtB4zTqAsyfZEsm1RZfx"
+              },
+              "href": "https://api.spotify.com/v1/albums/1GbtB4zTqAsyfZEsm1RZfx",
+              "id": "1GbtB4zTqAsyfZEsm1RZfx",
+              "images": [
+                {
+                  "height": 640,
+                  "url": "https://i.scdn.co/image/ab67616d0000b273e319baafd16e84f0408af2a0",
+                  "width": 640
+                },
+                {
+                  "height": 300,
+                  "url": "https://i.scdn.co/image/ab67616d00001e02e319baafd16e84f0408af2a0",
+                  "width": 300
+                },
+                {
+                  "height": 64,
+                  "url": "https://i.scdn.co/image/ab67616d00004851e319baafd16e84f0408af2a0",
+                  "width": 64
+                }
+              ],
+              "name": "A Night At The Opera (2011 Remaster)",
+              "release_date": "1975-11-21",
+              "release_date_precision": "day",
+              "total_tracks": 12,
+              "type": "album",
+              "uri": "spotify:album:1GbtB4zTqAsyfZEsm1RZfx"
+            },
+            "artists": [
+              {
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                },
+                "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                "name": "Queen",
+                "type": "artist",
+                "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+              }
+            ],
+            "disc_number": 1,
+            "duration_ms": 354320,
+            "explicit": false,
+            "external_ids": {
+              "isrc": "GBUM71029604"
+            },
+            "external_urls": {
+              "spotify": "https://open.spotify.com/track/4u7EnebtmKWzUH433cf5Qv"
+            },
+            "href": "https://api.spotify.com/v1/tracks/4u7EnebtmKWzUH433cf5Qv",
+            "id": "4u7EnebtmKWzUH433cf5Qv",
+            "is_local": false,
+            "is_playable": true,
+            "name": "Bohemian Rhapsody - 2011 Mix",
+            "popularity": 83,
+            "preview_url": null,
+            "track_number": 11,
+            "type": "track",
+            "uri": "spotify:track:4u7EnebtmKWzUH433cf5Qv"
+          }
+        ],
+        "limit": 1,
+        "next": "https://api.spotify.com/v1/search?query=bohemian&type=track&market=RU&offset=1&limit=1",
+        "offset": 0,
+        "previous": null,
+        "total": 11385
+      }
+    }
+  ],
+  "required": [
+    "tracks"
+  ],
+  "properties": {
+    "tracks": {
+      "$id": "#/properties/tracks",
+      "type": "object",
+      "title": "The tracks schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "href": "https://api.spotify.com/v1/search?query=bohemian&type=track&market=RU&offset=0&limit=1",
+          "items": [
+            {
+              "album": {
+                "album_type": "album",
+                "artists": [
+                  {
+                    "external_urls": {
+                      "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                    "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                    "name": "Queen",
+                    "type": "artist",
+                    "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                  }
+                ],
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/album/1GbtB4zTqAsyfZEsm1RZfx"
+                },
+                "href": "https://api.spotify.com/v1/albums/1GbtB4zTqAsyfZEsm1RZfx",
+                "id": "1GbtB4zTqAsyfZEsm1RZfx",
+                "images": [
+                  {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b273e319baafd16e84f0408af2a0",
+                    "width": 640
+                  },
+                  {
+                    "height": 300,
+                    "url": "https://i.scdn.co/image/ab67616d00001e02e319baafd16e84f0408af2a0",
+                    "width": 300
+                  },
+                  {
+                    "height": 64,
+                    "url": "https://i.scdn.co/image/ab67616d00004851e319baafd16e84f0408af2a0",
+                    "width": 64
+                  }
+                ],
+                "name": "A Night At The Opera (2011 Remaster)",
+                "release_date": "1975-11-21",
+                "release_date_precision": "day",
+                "total_tracks": 12,
+                "type": "album",
+                "uri": "spotify:album:1GbtB4zTqAsyfZEsm1RZfx"
+              },
+              "artists": [
+                {
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                  },
+                  "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                  "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                  "name": "Queen",
+                  "type": "artist",
+                  "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                }
+              ],
+              "disc_number": 1,
+              "duration_ms": 354320,
+              "explicit": false,
+              "external_ids": {
+                "isrc": "GBUM71029604"
+              },
+              "external_urls": {
+                "spotify": "https://open.spotify.com/track/4u7EnebtmKWzUH433cf5Qv"
+              },
+              "href": "https://api.spotify.com/v1/tracks/4u7EnebtmKWzUH433cf5Qv",
+              "id": "4u7EnebtmKWzUH433cf5Qv",
+              "is_local": false,
+              "is_playable": true,
+              "name": "Bohemian Rhapsody - 2011 Mix",
+              "popularity": 83,
+              "preview_url": null,
+              "track_number": 11,
+              "type": "track",
+              "uri": "spotify:track:4u7EnebtmKWzUH433cf5Qv"
+            }
+          ],
+          "limit": 1,
+          "next": "https://api.spotify.com/v1/search?query=bohemian&type=track&market=RU&offset=1&limit=1",
+          "offset": 0,
+          "previous": null,
+          "total": 11385
+        }
+      ],
+      "required": [
+        "href",
+        "items",
+        "limit",
+        "next",
+        "offset",
+        "previous",
+        "total"
+      ],
+      "properties": {
+        "href": {
+          "$id": "#/properties/tracks/properties/href",
+          "type": "string",
+          "title": "The href schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "https://api.spotify.com/v1/search?query=bohemian&type=track&market=RU&offset=0&limit=1"
+          ]
+        },
+        "items": {
+          "$id": "#/properties/tracks/properties/items",
+          "type": "array",
+          "title": "The items schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": [],
+          "examples": [
+            [
+              {
+                "album": {
+                  "album_type": "album",
+                  "artists": [
+                    {
+                      "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                      },
+                      "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                      "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                      "name": "Queen",
+                      "type": "artist",
+                      "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                    }
+                  ],
+                  "external_urls": {
+                    "spotify": "https://open.spotify.com/album/1GbtB4zTqAsyfZEsm1RZfx"
+                  },
+                  "href": "https://api.spotify.com/v1/albums/1GbtB4zTqAsyfZEsm1RZfx",
+                  "id": "1GbtB4zTqAsyfZEsm1RZfx",
+                  "images": [
+                    {
+                      "height": 640,
+                      "url": "https://i.scdn.co/image/ab67616d0000b273e319baafd16e84f0408af2a0",
+                      "width": 640
+                    },
+                    {
+                      "height": 300,
+                      "url": "https://i.scdn.co/image/ab67616d00001e02e319baafd16e84f0408af2a0",
+                      "width": 300
+                    },
+                    {
+                      "height": 64,
+                      "url": "https://i.scdn.co/image/ab67616d00004851e319baafd16e84f0408af2a0",
+                      "width": 64
+                    }
+                  ],
+                  "name": "A Night At The Opera (2011 Remaster)",
+                  "release_date": "1975-11-21",
+                  "release_date_precision": "day",
+                  "total_tracks": 12,
+                  "type": "album",
+                  "uri": "spotify:album:1GbtB4zTqAsyfZEsm1RZfx"
+                },
+                "artists": [
+                  {
+                    "external_urls": {
+                      "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                    },
+                    "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                    "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                    "name": "Queen",
+                    "type": "artist",
+                    "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                  }
+                ],
+                "disc_number": 1,
+                "duration_ms": 354320,
+                "explicit": false,
+                "external_ids": {
+                  "isrc": "GBUM71029604"
+                },
+                "external_urls": {
+                  "spotify": "https://open.spotify.com/track/4u7EnebtmKWzUH433cf5Qv"
+                },
+                "href": "https://api.spotify.com/v1/tracks/4u7EnebtmKWzUH433cf5Qv",
+                "id": "4u7EnebtmKWzUH433cf5Qv",
+                "is_local": false,
+                "is_playable": true,
+                "name": "Bohemian Rhapsody - 2011 Mix",
+                "popularity": 83,
+                "preview_url": null,
+                "track_number": 11,
+                "type": "track",
+                "uri": "spotify:track:4u7EnebtmKWzUH433cf5Qv"
+              }
+            ]
+          ],
+          "additionalItems": true,
+          "items": {
+            "$id": "#/properties/tracks/properties/items/items",
+            "anyOf": [
+              {
+                "$id": "#/properties/tracks/properties/items/items/anyOf/0",
+                "type": "object",
+                "title": "The first anyOf schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": {},
+                "examples": [
+                  {
+                    "album": {
+                      "album_type": "album",
+                      "artists": [
+                        {
+                          "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                          },
+                          "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                          "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                          "name": "Queen",
+                          "type": "artist",
+                          "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                        }
+                      ],
+                      "external_urls": {
+                        "spotify": "https://open.spotify.com/album/1GbtB4zTqAsyfZEsm1RZfx"
+                      },
+                      "href": "https://api.spotify.com/v1/albums/1GbtB4zTqAsyfZEsm1RZfx",
+                      "id": "1GbtB4zTqAsyfZEsm1RZfx",
+                      "images": [
+                        {
+                          "height": 640,
+                          "url": "https://i.scdn.co/image/ab67616d0000b273e319baafd16e84f0408af2a0",
+                          "width": 640
+                        },
+                        {
+                          "height": 300,
+                          "url": "https://i.scdn.co/image/ab67616d00001e02e319baafd16e84f0408af2a0",
+                          "width": 300
+                        },
+                        {
+                          "height": 64,
+                          "url": "https://i.scdn.co/image/ab67616d00004851e319baafd16e84f0408af2a0",
+                          "width": 64
+                        }
+                      ],
+                      "name": "A Night At The Opera (2011 Remaster)",
+                      "release_date": "1975-11-21",
+                      "release_date_precision": "day",
+                      "total_tracks": 12,
+                      "type": "album",
+                      "uri": "spotify:album:1GbtB4zTqAsyfZEsm1RZfx"
+                    },
+                    "artists": [
+                      {
+                        "external_urls": {
+                          "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                        "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                        "name": "Queen",
+                        "type": "artist",
+                        "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                      }
+                    ],
+                    "disc_number": 1,
+                    "duration_ms": 354320,
+                    "explicit": false,
+                    "external_ids": {
+                      "isrc": "GBUM71029604"
+                    },
+                    "external_urls": {
+                      "spotify": "https://open.spotify.com/track/4u7EnebtmKWzUH433cf5Qv"
+                    },
+                    "href": "https://api.spotify.com/v1/tracks/4u7EnebtmKWzUH433cf5Qv",
+                    "id": "4u7EnebtmKWzUH433cf5Qv",
+                    "is_local": false,
+                    "is_playable": true,
+                    "name": "Bohemian Rhapsody - 2011 Mix",
+                    "popularity": 83,
+                    "preview_url": null,
+                    "track_number": 11,
+                    "type": "track",
+                    "uri": "spotify:track:4u7EnebtmKWzUH433cf5Qv"
+                  }
+                ],
+                "required": [
+                  "album",
+                  "artists",
+                  "disc_number",
+                  "duration_ms",
+                  "explicit",
+                  "external_ids",
+                  "external_urls",
+                  "href",
+                  "id",
+                  "is_local",
+                  "is_playable",
+                  "name",
+                  "popularity",
+                  "preview_url",
+                  "track_number",
+                  "type",
+                  "uri"
+                ],
+                "properties": {
+                  "album": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album",
+                    "type": "object",
+                    "title": "The album schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                      {
+                        "album_type": "album",
+                        "artists": [
+                          {
+                            "external_urls": {
+                              "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                            "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                            "name": "Queen",
+                            "type": "artist",
+                            "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                          }
+                        ],
+                        "external_urls": {
+                          "spotify": "https://open.spotify.com/album/1GbtB4zTqAsyfZEsm1RZfx"
+                        },
+                        "href": "https://api.spotify.com/v1/albums/1GbtB4zTqAsyfZEsm1RZfx",
+                        "id": "1GbtB4zTqAsyfZEsm1RZfx",
+                        "images": [
+                          {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e319baafd16e84f0408af2a0",
+                            "width": 640
+                          },
+                          {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e319baafd16e84f0408af2a0",
+                            "width": 300
+                          },
+                          {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d00004851e319baafd16e84f0408af2a0",
+                            "width": 64
+                          }
+                        ],
+                        "name": "A Night At The Opera (2011 Remaster)",
+                        "release_date": "1975-11-21",
+                        "release_date_precision": "day",
+                        "total_tracks": 12,
+                        "type": "album",
+                        "uri": "spotify:album:1GbtB4zTqAsyfZEsm1RZfx"
+                      }
+                    ],
+                    "required": [
+                      "album_type",
+                      "artists",
+                      "external_urls",
+                      "href",
+                      "id",
+                      "images",
+                      "name",
+                      "release_date",
+                      "release_date_precision",
+                      "total_tracks",
+                      "type",
+                      "uri"
+                    ],
+                    "properties": {
+                      "album_type": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/album_type",
+                        "type": "string",
+                        "title": "The album_type schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "album"
+                        ]
+                      },
+                      "artists": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists",
+                        "type": "array",
+                        "title": "The artists schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "examples": [
+                          [
+                            {
+                              "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                              },
+                              "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                              "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                              "name": "Queen",
+                              "type": "artist",
+                              "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                            }
+                          ]
+                        ],
+                        "additionalItems": true,
+                        "items": {
+                          "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists/items",
+                          "anyOf": [
+                            {
+                              "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists/items/anyOf/0",
+                              "type": "object",
+                              "title": "The first anyOf schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": {},
+                              "examples": [
+                                {
+                                  "external_urls": {
+                                    "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                                  },
+                                  "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                                  "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                                  "name": "Queen",
+                                  "type": "artist",
+                                  "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                                }
+                              ],
+                              "required": [
+                                "external_urls",
+                                "href",
+                                "id",
+                                "name",
+                                "type",
+                                "uri"
+                              ],
+                              "properties": {
+                                "external_urls": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists/items/anyOf/0/properties/external_urls",
+                                  "type": "object",
+                                  "title": "The external_urls schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": {},
+                                  "examples": [
+                                    {
+                                      "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                                    }
+                                  ],
+                                  "required": [
+                                    "spotify"
+                                  ],
+                                  "properties": {
+                                    "spotify": {
+                                      "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists/items/anyOf/0/properties/external_urls/properties/spotify",
+                                      "type": "string",
+                                      "title": "The spotify schema",
+                                      "description": "An explanation about the purpose of this instance.",
+                                      "default": "",
+                                      "examples": [
+                                        "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                                      ]
+                                    }
+                                  },
+                                  "additionalProperties": true
+                                },
+                                "href": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists/items/anyOf/0/properties/href",
+                                  "type": "string",
+                                  "title": "The href schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": "",
+                                  "examples": [
+                                    "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d"
+                                  ]
+                                },
+                                "id": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists/items/anyOf/0/properties/id",
+                                  "type": "string",
+                                  "title": "The id schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": "",
+                                  "examples": [
+                                    "1dfeR4HaWDbWqFHLkxsg1d"
+                                  ]
+                                },
+                                "name": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists/items/anyOf/0/properties/name",
+                                  "type": "string",
+                                  "title": "The name schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": "",
+                                  "examples": [
+                                    "Queen"
+                                  ]
+                                },
+                                "type": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists/items/anyOf/0/properties/type",
+                                  "type": "string",
+                                  "title": "The type schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": "",
+                                  "examples": [
+                                    "artist"
+                                  ]
+                                },
+                                "uri": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/artists/items/anyOf/0/properties/uri",
+                                  "type": "string",
+                                  "title": "The uri schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": "",
+                                  "examples": [
+                                    "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                                  ]
+                                }
+                              },
+                              "additionalProperties": true
+                            }
+                          ]
+                        }
+                      },
+                      "external_urls": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/external_urls",
+                        "type": "object",
+                        "title": "The external_urls schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                          {
+                            "spotify": "https://open.spotify.com/album/1GbtB4zTqAsyfZEsm1RZfx"
+                          }
+                        ],
+                        "required": [
+                          "spotify"
+                        ],
+                        "properties": {
+                          "spotify": {
+                            "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/external_urls/properties/spotify",
+                            "type": "string",
+                            "title": "The spotify schema",
+                            "description": "An explanation about the purpose of this instance.",
+                            "default": "",
+                            "examples": [
+                              "https://open.spotify.com/album/1GbtB4zTqAsyfZEsm1RZfx"
+                            ]
+                          }
+                        },
+                        "additionalProperties": true
+                      },
+                      "href": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/href",
+                        "type": "string",
+                        "title": "The href schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "https://api.spotify.com/v1/albums/1GbtB4zTqAsyfZEsm1RZfx"
+                        ]
+                      },
+                      "id": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/id",
+                        "type": "string",
+                        "title": "The id schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "1GbtB4zTqAsyfZEsm1RZfx"
+                        ]
+                      },
+                      "images": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/images",
+                        "type": "array",
+                        "title": "The images schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": [],
+                        "examples": [
+                          [
+                            {
+                              "height": 640,
+                              "url": "https://i.scdn.co/image/ab67616d0000b273e319baafd16e84f0408af2a0",
+                              "width": 640
+                            },
+                            {
+                              "height": 300,
+                              "url": "https://i.scdn.co/image/ab67616d00001e02e319baafd16e84f0408af2a0",
+                              "width": 300
+                            }
+                          ]
+                        ],
+                        "additionalItems": true,
+                        "items": {
+                          "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/images/items",
+                          "anyOf": [
+                            {
+                              "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/images/items/anyOf/0",
+                              "type": "object",
+                              "title": "The first anyOf schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": {},
+                              "examples": [
+                                {
+                                  "height": 640,
+                                  "url": "https://i.scdn.co/image/ab67616d0000b273e319baafd16e84f0408af2a0",
+                                  "width": 640
+                                }
+                              ],
+                              "required": [
+                                "height",
+                                "url",
+                                "width"
+                              ],
+                              "properties": {
+                                "height": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/images/items/anyOf/0/properties/height",
+                                  "type": "integer",
+                                  "title": "The height schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": 0,
+                                  "examples": [
+                                    640
+                                  ]
+                                },
+                                "url": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/images/items/anyOf/0/properties/url",
+                                  "type": "string",
+                                  "title": "The url schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": "",
+                                  "examples": [
+                                    "https://i.scdn.co/image/ab67616d0000b273e319baafd16e84f0408af2a0"
+                                  ]
+                                },
+                                "width": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/images/items/anyOf/0/properties/width",
+                                  "type": "integer",
+                                  "title": "The width schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": 0,
+                                  "examples": [
+                                    640
+                                  ]
+                                }
+                              },
+                              "additionalProperties": true
+                            }
+                          ]
+                        }
+                      },
+                      "name": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/name",
+                        "type": "string",
+                        "title": "The name schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "A Night At The Opera (2011 Remaster)"
+                        ]
+                      },
+                      "release_date": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/release_date",
+                        "type": "string",
+                        "title": "The release_date schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "1975-11-21"
+                        ]
+                      },
+                      "release_date_precision": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/release_date_precision",
+                        "type": "string",
+                        "title": "The release_date_precision schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "day"
+                        ]
+                      },
+                      "total_tracks": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/total_tracks",
+                        "type": "integer",
+                        "title": "The total_tracks schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": 0,
+                        "examples": [
+                          12
+                        ]
+                      },
+                      "type": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/type",
+                        "type": "string",
+                        "title": "The type schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "album"
+                        ]
+                      },
+                      "uri": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/album/properties/uri",
+                        "type": "string",
+                        "title": "The uri schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "spotify:album:1GbtB4zTqAsyfZEsm1RZfx"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "artists": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists",
+                    "type": "array",
+                    "title": "The artists schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                      [
+                        {
+                          "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                          },
+                          "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                          "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                          "name": "Queen",
+                          "type": "artist",
+                          "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                        }
+                      ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                      "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists/items",
+                      "anyOf": [
+                        {
+                          "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists/items/anyOf/0",
+                          "type": "object",
+                          "title": "The first anyOf schema",
+                          "description": "An explanation about the purpose of this instance.",
+                          "default": {},
+                          "examples": [
+                            {
+                              "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                              },
+                              "href": "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d",
+                              "id": "1dfeR4HaWDbWqFHLkxsg1d",
+                              "name": "Queen",
+                              "type": "artist",
+                              "uri": "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                            }
+                          ],
+                          "required": [
+                            "external_urls",
+                            "href",
+                            "id",
+                            "name",
+                            "type",
+                            "uri"
+                          ],
+                          "properties": {
+                            "external_urls": {
+                              "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists/items/anyOf/0/properties/external_urls",
+                              "type": "object",
+                              "title": "The external_urls schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": {},
+                              "examples": [
+                                {
+                                  "spotify": "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                                }
+                              ],
+                              "required": [
+                                "spotify"
+                              ],
+                              "properties": {
+                                "spotify": {
+                                  "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists/items/anyOf/0/properties/external_urls/properties/spotify",
+                                  "type": "string",
+                                  "title": "The spotify schema",
+                                  "description": "An explanation about the purpose of this instance.",
+                                  "default": "",
+                                  "examples": [
+                                    "https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d"
+                                  ]
+                                }
+                              },
+                              "additionalProperties": true
+                            },
+                            "href": {
+                              "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists/items/anyOf/0/properties/href",
+                              "type": "string",
+                              "title": "The href schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                "https://api.spotify.com/v1/artists/1dfeR4HaWDbWqFHLkxsg1d"
+                              ]
+                            },
+                            "id": {
+                              "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists/items/anyOf/0/properties/id",
+                              "type": "string",
+                              "title": "The id schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                "1dfeR4HaWDbWqFHLkxsg1d"
+                              ]
+                            },
+                            "name": {
+                              "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists/items/anyOf/0/properties/name",
+                              "type": "string",
+                              "title": "The name schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                "Queen"
+                              ]
+                            },
+                            "type": {
+                              "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists/items/anyOf/0/properties/type",
+                              "type": "string",
+                              "title": "The type schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                "artist"
+                              ]
+                            },
+                            "uri": {
+                              "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/artists/items/anyOf/0/properties/uri",
+                              "type": "string",
+                              "title": "The uri schema",
+                              "description": "An explanation about the purpose of this instance.",
+                              "default": "",
+                              "examples": [
+                                "spotify:artist:1dfeR4HaWDbWqFHLkxsg1d"
+                              ]
+                            }
+                          },
+                          "additionalProperties": true
+                        }
+                      ]
+                    }
+                  },
+                  "disc_number": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/disc_number",
+                    "type": "integer",
+                    "title": "The disc_number schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "duration_ms": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/duration_ms",
+                    "type": "integer",
+                    "title": "The duration_ms schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      354320
+                    ]
+                  },
+                  "explicit": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/explicit",
+                    "type": "boolean",
+                    "title": "The explicit schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "external_ids": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/external_ids",
+                    "type": "object",
+                    "title": "The external_ids schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                      {
+                        "isrc": "GBUM71029604"
+                      }
+                    ],
+                    "required": [
+                      "isrc"
+                    ],
+                    "properties": {
+                      "isrc": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/external_ids/properties/isrc",
+                        "type": "string",
+                        "title": "The isrc schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "GBUM71029604"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "external_urls": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/external_urls",
+                    "type": "object",
+                    "title": "The external_urls schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": {},
+                    "examples": [
+                      {
+                        "spotify": "https://open.spotify.com/track/4u7EnebtmKWzUH433cf5Qv"
+                      }
+                    ],
+                    "required": [
+                      "spotify"
+                    ],
+                    "properties": {
+                      "spotify": {
+                        "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/external_urls/properties/spotify",
+                        "type": "string",
+                        "title": "The spotify schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                          "https://open.spotify.com/track/4u7EnebtmKWzUH433cf5Qv"
+                        ]
+                      }
+                    },
+                    "additionalProperties": true
+                  },
+                  "href": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/href",
+                    "type": "string",
+                    "title": "The href schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "https://api.spotify.com/v1/tracks/4u7EnebtmKWzUH433cf5Qv"
+                    ]
+                  },
+                  "id": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/id",
+                    "type": "string",
+                    "title": "The id schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "4u7EnebtmKWzUH433cf5Qv"
+                    ]
+                  },
+                  "is_local": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/is_local",
+                    "type": "boolean",
+                    "title": "The is_local schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      false
+                    ]
+                  },
+                  "is_playable": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/is_playable",
+                    "type": "boolean",
+                    "title": "The is_playable schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": false,
+                    "examples": [
+                      true
+                    ]
+                  },
+                  "name": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/name",
+                    "type": "string",
+                    "title": "The name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "Bohemian Rhapsody - 2011 Mix"
+                    ]
+                  },
+                  "popularity": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/popularity",
+                    "type": "integer",
+                    "title": "The popularity schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      83
+                    ]
+                  },
+                  "preview_url": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/preview_url",
+                    "type": "null",
+                    "title": "The preview_url schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": null,
+                    "examples": [
+                      null
+                    ]
+                  },
+                  "track_number": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/track_number",
+                    "type": "integer",
+                    "title": "The track_number schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                      11
+                    ]
+                  },
+                  "type": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/type",
+                    "type": "string",
+                    "title": "The type schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "track"
+                    ]
+                  },
+                  "uri": {
+                    "$id": "#/properties/tracks/properties/items/items/anyOf/0/properties/uri",
+                    "type": "string",
+                    "title": "The uri schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                      "spotify:track:4u7EnebtmKWzUH433cf5Qv"
+                    ]
+                  }
+                },
+                "additionalProperties": true
+              }
+            ]
+          }
+        },
+        "limit": {
+          "$id": "#/properties/tracks/properties/limit",
+          "type": "integer",
+          "title": "The limit schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "next": {
+          "$id": "#/properties/tracks/properties/next",
+          "type": "string",
+          "title": "The next schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "https://api.spotify.com/v1/search?query=bohemian&type=track&market=RU&offset=1&limit=1"
+          ]
+        },
+        "offset": {
+          "$id": "#/properties/tracks/properties/offset",
+          "type": "integer",
+          "title": "The offset schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        },
+        "previous": {
+          "$id": "#/properties/tracks/properties/previous",
+          "type": "null",
+          "title": "The previous schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": null,
+          "examples": [
+            null
+          ]
+        },
+        "total": {
+          "$id": "#/properties/tracks/properties/total",
+          "type": "integer",
+          "title": "The total schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": 0,
+          "examples": [
+            11385
+          ]
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

@@ -1,19 +1,28 @@
 package api;
 
-import api.bodies.ResponseBody;
+import api.bodies.artist.ArtistBody;
+import api.bodies.requests.Requests;
+import api.bodies.specifications.Specifications;
 import org.testng.annotations.Test;
 
 public class SomeTests {
-    Specifications specifications = new Specifications();
 
-    @Test
-    public void statusCodeTest() {
-        ResponseBody response = Requests.getLookUp(specifications.requestSpecificationLookUp, "ball",
-                specifications.responseSpecification).as(ResponseBody.class);
+    Specifications specifications = new Specifications();
+    ArtistBody artistBody = new ArtistBody();
+
+    // TODO: problem with deserialization
+    @Test(description = "Get information about artist")
+    public void getInformationAboutArtist() {
+        Requests.
+                getAnArtist("0TnOYISbd1XYRBk9myaseg",
+                        specifications.getAnArtist,
+                        specifications.responseSpecification).as(ArtistBody.class);
+
     }
 
-    @Test
-    public void schemaValidationTest() {
-        Requests.jsonSchemaValidation(specifications.requestSpecificationLookUp);
+    @Test(description = "Search track schema validation")
+    public void searchTrackSchemaValidation() {
+        Requests.
+                schemaValidation(specifications.searchTracks, specifications.responseSpecification);
     }
 }
