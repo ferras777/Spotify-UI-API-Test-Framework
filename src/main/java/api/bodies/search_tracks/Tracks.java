@@ -1,4 +1,4 @@
-package api.bodies.searchTracks;
+package api.bodies.search_tracks;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;

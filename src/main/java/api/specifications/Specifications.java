@@ -8,26 +8,19 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 public class Specifications {
-    String token = "BQCfKitIGdsOxC6kRNzve38ly8hZYcC1DxpdkGMAj-fxMx_RxcP_N4A2Rr-Sf-Y-1HhYgwgz8DU7-RA_-g938ZqAhco_qrXSP" +
-            "KY8xCR8mMBMfbS0cMl9cZuFuIsQB4b-oMKHNWTwTvixqR9QfD7Ck_THBpdvW6FnftO-l5ykOEE5sFphqdpp5cFFxraHCKfh25Eh55ahD" +
-            "UFU-ZPDM_kJ23wWih14CN4LHQE2jOz8ExxnDX3TlcJV3X_RQxMWNkR9ZdDoOTw18gmPc5uxreEPMfmFGRf6IsIhuq5-";
+    String token = "BQBIgibizZCQTKw7GAyq58StJBFMUyNLa2-DoMqNBjRFFyRbeyTsg5aV2oKpnf7TVFmpPjnomhVy7ow08Qfphyc1FkFmJelJ" +
+            "wk0Ao1_qLodzMgmJhls_5UIWMwvJttGt3jM96CLleYHli8VWj4oXCuxyXSdGQkobCo1rC0Fyym1LdsquPMT_JyJywj39CdCEyndBSMJ" +
+            "xLq4Do3TDBih0Cat751u_1rNnPFh10a5IN1Xcpz8Xw6R4htyZ8pcn46_vk27WcKObtQS5VPBQFd-SotOxuhgvS22A6gZn";
 
 
-    public RequestSpecification searchTracks = new RequestSpecBuilder()
-            .setBaseUri("https://api.spotify.com/v1/search")
-            .addHeader("Authorization", "Bearer " + token)
-            .setAccept(ContentType.JSON)
-            .setContentType(ContentType.ANY)
-            .build();
-
-    public RequestSpecification getAnArtist = new RequestSpecBuilder()
-            .setBaseUri("https://api.spotify.com/v1/artists/")
+    public RequestSpecification requestSpecification = new RequestSpecBuilder()
+            .setBaseUri("https://api.spotify.com/v1")
             .addHeader("Authorization", "Bearer " + token)
             .setAccept(ContentType.JSON)
             .setContentType(ContentType.ANY)
             .build();
 
     public ResponseSpecification responseSpecification = new ResponseSpecBuilder()
-            .log(LogDetail.ALL)
+            .log(LogDetail.BODY)
             .build();
 }

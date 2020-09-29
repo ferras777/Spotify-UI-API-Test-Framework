@@ -15,7 +15,7 @@ public class  ArtistBody {
 
     @SerializedName("external_urls")
     @Expose
-    public ExternalUrls externalUrls;
+    public ExternalUrls external_urls;
 
     @SerializedName("followers")
     @Expose

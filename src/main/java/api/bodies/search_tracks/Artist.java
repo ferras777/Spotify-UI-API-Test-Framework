@@ -1,12 +1,12 @@
 
-package api.bodies.searchTracks;
-
+package api.bodies.search_tracks;
 import com.google.gson.annotations.SerializedName;
 
-public class Artist_ {
+
+public class Artist {
 
     @SerializedName("external_urls")
-    public ExternalUrls__ externalUrls;
+    public ExternalUrls external_urls;
 
     @SerializedName("href")
     public String href;

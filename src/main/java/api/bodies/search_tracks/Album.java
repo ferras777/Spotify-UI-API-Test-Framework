@@ -1,4 +1,4 @@
-package api.bodies.searchTracks;
+package api.bodies.search_tracks;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -15,13 +15,13 @@ public class Album {
 
     @SerializedName("album_type")
     @Expose(deserialize = false)
-    public String albumType;
+    public String album_type;
 
     @SerializedName("artists")
     public List<Artist> artists = null;
 
     @SerializedName("external_urls")
-    public ExternalUrls_ externalUrls;
+    public ExternalUrls_ external_urls;
 
     @SerializedName("href")
     public String href;
@@ -36,13 +36,13 @@ public class Album {
     public String name;
 
     @SerializedName("release_date")
-    public String releaseDate;
+    public String release_date;
 
     @SerializedName("release_date_precision")
-    public String releaseDatePrecision;
+    public String release_date_precision;
 
     @SerializedName("total_tracks")
-    public Integer totalTracks;
+    public Integer total_tracks;
 
     @SerializedName("type")
     public String type;

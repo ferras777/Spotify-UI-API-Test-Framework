@@ -1,4 +1,4 @@
-package api.bodies.searchTracks;
+package api.bodies.search_tracks;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ResponseBody {
+public class SearchTrackBody {
 
     @SerializedName("tracks")
     private Tracks tracks;

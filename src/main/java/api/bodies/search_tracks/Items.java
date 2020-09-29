@@ -1,4 +1,4 @@
-package api.bodies.searchTracks;
+package api.bodies.search_tracks;
 
 import com.google.gson.annotations.SerializedName;
 import lombok.*;
@@ -17,19 +17,19 @@ public class Items {
     public List<Artist_> artists = null;
 
     @SerializedName("disc_number")
-    public Integer discNumber;
+    public Integer disc_number;
 
     @SerializedName("duration_ms")
-    public Integer durationMs;
+    public Integer duration_ms;
 
     @SerializedName("explicit")
     public Boolean explicit;
 
     @SerializedName("external_ids")
-    public ExternalIds externalIds;
+    public ExternalIds external_ids;
 
     @SerializedName("external_urls")
-    public ExternalUrls___ externalUrls;
+    public ExternalUrls___ external_urls;
 
     @SerializedName("href")
     public String href;
@@ -38,10 +38,10 @@ public class Items {
     public String id;
 
     @SerializedName("is_local")
-    public Boolean isLocal;
+    public Boolean is_local;
 
     @SerializedName("is_playable")
-    public Boolean isPlayable;
+    public Boolean is_playable;
 
     @SerializedName("name")
     public String name;
@@ -50,10 +50,10 @@ public class Items {
     public Integer popularity;
 
     @SerializedName("preview_url")
-    public Object previewUrl;
+    public Object preview_url;
 
     @SerializedName("track_number")
-    public Integer trackNumber;
+    public Integer track_number;
 
     @SerializedName("type")
     public String type;
