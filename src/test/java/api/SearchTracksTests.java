@@ -22,7 +22,7 @@ public class SearchTracksTests {
         Utils.schemaValidation(response, "SearchTrackSchema.json");
     }
 
-    @Test(description="Search track")
+    @Test(description="Search track", dependsOnMethods = {"searchTrackSchemaValidation"})
     public void searchTrack() {
         SearchTrackBody searchTrackBody = response.as(SearchTrackBody.class);
 
