@@ -11,16 +11,15 @@ public class SearchTracksTests {
 
     SearchTracksRequests searchTracksRequests = new SearchTracksRequests();
     SearchTracksAsserts searchTracksAsserts = new SearchTracksAsserts();
-    Utils utils = new Utils();
 
-    String trackName = "popular";
+    String trackName = "bohemian";
 
     Response response = searchTracksRequests.
             searchForTracks(trackName);
 
     @Test(description = "Search track schema validation")
     public void searchTrackSchemaValidation() {
-        utils.schemaValidation(response, "SearchTrackSchema.json");
+        Utils.schemaValidation(response, "SearchTrackSchema.json");
     }
 
     @Test(description="Search track")

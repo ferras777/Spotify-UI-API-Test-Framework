@@ -51,7 +51,7 @@ public class Utils {
         return properties.getProperty(propertyName);
     }
 
-    public void schemaValidation(Response response, String nameOfSchema) {
+    public static void schemaValidation(Response response, String nameOfSchema) {
         response.
                 then().
                 assertThat().
