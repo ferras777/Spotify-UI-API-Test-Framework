@@ -8,12 +8,12 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 public class Specifications {
-    Utils utils = new Utils();
 
-    String token = utils.getProperty("token");
+    String token = Utils.getProperty("token");
 
     public RequestSpecification requestSpecification = new RequestSpecBuilder()
             .setBaseUri("https://api.spotify.com/v1")
+            .setPort(443)
             .addHeader("Authorization", "Bearer " + token)
             .setAccept(ContentType.JSON)
             .setContentType(ContentType.ANY)

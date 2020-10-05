@@ -16,7 +16,7 @@ import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInC
 
 public class Utils {
 
-    public void getAccessTokenAsProperty() throws ParseException, SpotifyWebApiException, IOException {
+    public static void getAccessTokenAsProperty() throws ParseException, SpotifyWebApiException, IOException {
         Properties property = new Properties();
 
         final String clientId = "124994db560e4fc9821d67212382c80c";
@@ -39,7 +39,7 @@ public class Utils {
         }
     }
 
-    public String getProperty(String propertyName) {
+    public static String getProperty(String propertyName) {
         Properties properties = new Properties();
 
         try(FileReader fileReader = new FileReader("src/main/resources/config.properties")){
