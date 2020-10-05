@@ -23,7 +23,7 @@ public class  ArtistBody {
 
     @SerializedName("genres")
     @Expose
-    public List<String> genres = null;
+    public List<String> genres;
 
     @SerializedName("href")
     @Expose
@@ -35,7 +35,7 @@ public class  ArtistBody {
 
     @SerializedName("images")
     @Expose
-    public List<Image> images = null;
+    public List<Image> images;
 
     @SerializedName("name")
     @Expose

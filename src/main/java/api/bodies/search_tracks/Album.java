@@ -14,14 +14,13 @@ import java.util.List;
 public class Album {
 
     @SerializedName("album_type")
-    @Expose(deserialize = false)
     public String album_type;
 
     @SerializedName("artists")
-    public List<Artist> artists = null;
+    public List<Artist> artists;
 
     @SerializedName("external_urls")
-    public ExternalUrls_ external_urls;
+    public ExternalUrls external_urls;
 
     @SerializedName("href")
     public String href;
@@ -30,7 +29,7 @@ public class Album {
     public String id;
 
     @SerializedName("images")
-    public List<Image> images = null;
+    public List<Image> images;
 
     @SerializedName("name")
     public String name;

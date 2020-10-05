@@ -16,7 +16,7 @@ public class Tracks {
     public String href;
 
     @SerializedName("items")
-    public List<Items> items = null;
+    public List<Items> items;
 
     @SerializedName("limit")
     public Integer limit;

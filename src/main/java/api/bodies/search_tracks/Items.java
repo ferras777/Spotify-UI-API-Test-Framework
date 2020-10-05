@@ -14,7 +14,7 @@ public class Items {
     public Album album;
 
     @SerializedName("artists")
-    public List<Artist_> artists = null;
+    public List<Artist> artists;
 
     @SerializedName("disc_number")
     public Integer disc_number;
@@ -29,7 +29,7 @@ public class Items {
     public ExternalIds external_ids;
 
     @SerializedName("external_urls")
-    public ExternalUrls___ external_urls;
+    public ExternalUrls external_urls;
 
     @SerializedName("href")
     public String href;

@@ -6,7 +6,9 @@ import lombok.Getter;
 @Getter
 public enum Artists {
 
-    PITBULL("Pitbull","0TnOYISbd1XYRBk9myaseg");
+    PITBULL("Pitbull","0TnOYISbd1XYRBk9myaseg"),
+    FALLING_IN_REVERSE("Falling In Reverse", "2CmaKO2zEGJ1NWpS1yfVGz"),
+    METALLICA("Metallica","2ye2Wgw4gimLv2eAKyk1NB");
 
     String NAME;
     String ID;
