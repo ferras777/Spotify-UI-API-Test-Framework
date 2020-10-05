@@ -24,15 +24,12 @@ public class ArtistTests {
         };
     }
 
-    @Test(description = "Check is right name of artist", dataProvider = "artists")
-    public void checkIsRightNameOfArtistParallelTest(Artists artist) {
-
-        final Thread thread = Thread.currentThread();
-
+    @Test(threadPoolSize = 30, invocationCount = 3, invocationTimeOut = 1000,
+            description = "Check right name of artist", dataProvider = "artists")
+    public void checkRightNameOfArtistParallelTest(Artists artist) {
         ArtistBody response = artistRequests.
                 getAnArtist(artist.getID()).as(ArtistBody.class);
 
         artistAsserts.checkResponseRightName(response, artist);
-        System.out.println(thread.getId()+ "_" + thread.getName() + "_" + artist.getNAME());
     }
 }

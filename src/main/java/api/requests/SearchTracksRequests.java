@@ -4,7 +4,6 @@ import api.specifications.Specifications;
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class SearchTracksRequests {
 
