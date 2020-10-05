@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class  ArtistBody {
+public class ArtistBody {
 
     @SerializedName("external_urls")
     @Expose

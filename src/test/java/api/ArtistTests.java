@@ -14,7 +14,6 @@ public class ArtistTests {
     ArtistRequests artistRequests = new ArtistRequests();
     ArtistAsserts artistAsserts = new ArtistAsserts();
 
-
     @DataProvider(parallel = true)
     public Object[][] artists() {
         return new Object[][]{

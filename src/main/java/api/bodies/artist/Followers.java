@@ -1,4 +1,3 @@
-
 package api.bodies.artist;
 
 import com.google.gson.annotations.Expose;

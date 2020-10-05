@@ -9,6 +9,9 @@ import io.restassured.specification.ResponseSpecification;
 
 public class Specifications {
 
+    public ResponseSpecification responseSpecification = new ResponseSpecBuilder()
+            .build();
+
     String token = Utils.getProperty("token");
 
     public RequestSpecification requestSpecification = new RequestSpecBuilder()
@@ -17,8 +20,5 @@ public class Specifications {
             .addHeader("Authorization", "Bearer " + token)
             .setAccept(ContentType.JSON)
             .setContentType(ContentType.ANY)
-            .build();
-
-    public ResponseSpecification responseSpecification = new ResponseSpecBuilder()
             .build();
 }

@@ -32,7 +32,7 @@ public class Utils {
 
         property.setProperty("token", clientCredentials.getAccessToken());
 
-        try(FileWriter output = new FileWriter("src/main/resources/config.properties")){
+        try (FileWriter output = new FileWriter("src/main/resources/config.properties")) {
             property.store(output, "These are properties");
         } catch (IOException e) {
             e.printStackTrace();
@@ -42,7 +42,7 @@ public class Utils {
     public static String getProperty(String propertyName) {
         Properties properties = new Properties();
 
-        try(FileReader fileReader = new FileReader("src/main/resources/config.properties")){
+        try (FileReader fileReader = new FileReader("src/main/resources/config.properties")) {
             getAccessTokenAsProperty();
             properties.load(fileReader);
         } catch (IOException | ParseException | SpotifyWebApiException e) {

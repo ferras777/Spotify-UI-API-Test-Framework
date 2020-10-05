@@ -17,11 +17,11 @@ public class SearchTracksRequests {
                 .param("type", "track")
                 .param("limit", 1)
                 .param("market", "RU").
-        when()
+                        when()
                 .get("/search").
-        then().
-                spec(specifications.responseSpecification).
-                assertThat().statusCode(200).
+                        then().
+                        spec(specifications.responseSpecification).
+                        assertThat().statusCode(200).
                         extract().response();
     }
 }

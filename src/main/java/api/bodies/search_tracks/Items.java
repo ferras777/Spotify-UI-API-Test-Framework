@@ -1,7 +1,9 @@
 package api.bodies.search_tracks;
 
 import com.google.gson.annotations.SerializedName;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.List;
 
