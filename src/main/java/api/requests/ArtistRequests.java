@@ -10,6 +10,7 @@ public class ArtistRequests {
 
     public Response getAnArtist(String id) {
 
+        //TODO rewrite in bdd style
         return given()
                 .spec(specifications.requestSpecification)
                 .when()

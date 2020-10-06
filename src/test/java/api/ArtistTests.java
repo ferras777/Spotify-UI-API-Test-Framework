@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import static api.enums.Artists.*;
 
+//TODO tix NPE
 public class ArtistTests {
 
     ArtistRequests artistRequests = new ArtistRequests();

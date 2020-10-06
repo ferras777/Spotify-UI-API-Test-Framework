@@ -11,6 +11,7 @@ public class SearchTracksRequests {
 
     public Response searchForTracks(String searchString) {
 
+        //TODO rewrite in bdd style
         return given()
                 .spec(specifications.requestSpecification)
                 .param("q", searchString)

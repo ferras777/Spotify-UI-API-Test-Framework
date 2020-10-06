@@ -4,6 +4,7 @@ import api.bodies.search_tracks.Items;
 import api.bodies.search_tracks.SearchTrackBody;
 import org.testng.Assert;
 
+//TODO static import
 public class SearchTracksAsserts {
     public void checkTrackNameContainsSearchString(SearchTrackBody searchTrackBody, String searchString) {
 

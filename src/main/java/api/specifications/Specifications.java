@@ -7,6 +7,7 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
+//TODO split specifications to two classes
 public class Specifications {
 
     public ResponseSpecification responseSpecification = new ResponseSpecBuilder()

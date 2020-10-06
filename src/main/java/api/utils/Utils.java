@@ -14,6 +14,7 @@ import java.util.Properties;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
+//TODO split methods to different classes
 public class Utils {
 
     public static void getAccessTokenAsProperty() throws ParseException, SpotifyWebApiException, IOException {
