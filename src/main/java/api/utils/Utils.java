@@ -1,5 +1,6 @@
 package api.utils;
 
+import api.bodies.track.TrackBody;
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
 import com.wrapper.spotify.model_objects.credentials.ClientCredentials;
@@ -12,6 +13,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Properties;
 
+import static io.restassured.RestAssured.when;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 //TODO split methods to different classes
@@ -57,5 +59,9 @@ public class Utils {
                 then().
                 assertThat().
                 body(matchesJsonSchemaInClasspath(nameOfSchema));
+    }
+
+    public static String getContentTypeofDownloadFile(TrackBody trackBody) {
+        return when().get(trackBody.getPreview_url()).then().extract().contentType();
     }
 }
