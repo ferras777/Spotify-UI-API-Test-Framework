@@ -1,6 +1,5 @@
 package api.enums;
 
-
 import lombok.Getter;
 
 @Getter

@@ -61,6 +61,7 @@ public class Utils {
                 body(matchesJsonSchemaInClasspath(nameOfSchema));
     }
 
+    //TODO implement body interface
     public static String getContentTypeofDownloadFile(TrackBody trackBody) {
         return when().get(trackBody.getPreview_url()).then().extract().contentType();
     }

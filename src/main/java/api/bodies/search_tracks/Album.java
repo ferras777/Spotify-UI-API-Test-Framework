@@ -1,5 +1,6 @@
 package api.bodies.search_tracks;
 
+import api.bodies.common.ExternalUrlsBody;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Album {
+public class Album extends ExternalUrlsBody {
 
     @SerializedName("album_type")
     public String album_type;

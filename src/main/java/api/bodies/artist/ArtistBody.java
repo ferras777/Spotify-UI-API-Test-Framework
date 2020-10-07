@@ -8,6 +8,7 @@ import lombok.Setter;
 
 import java.util.List;
 
+//TODO make fields private
 @Getter
 @Setter
 @NoArgsConstructor
