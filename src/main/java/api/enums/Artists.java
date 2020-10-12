@@ -9,12 +9,11 @@ public enum Artists {
     FALLING_IN_REVERSE("Falling In Reverse", "2CmaKO2zEGJ1NWpS1yfVGz"),
     METALLICA("Metallica", "2ye2Wgw4gimLv2eAKyk1NB");
 
-    //TODO variables in lower case
-    String NAME;
-    String ID;
+    private final String name;
+    private final String id;
 
-    Artists(String NAME, String ID) {
-        this.NAME = NAME;
-        this.ID = ID;
+    Artists(String name, String id) {
+        this.name = name;
+        this.id = id;
     }
 }

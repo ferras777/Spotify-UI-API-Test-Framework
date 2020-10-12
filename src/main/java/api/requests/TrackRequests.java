@@ -1,22 +1,21 @@
 package api.requests;
 
-import api.specifications.Specifications;
 import io.restassured.response.Response;
 
+import static api.specifications.RequestSpecifications.requestSpecification;
+import static api.specifications.ResponseSpecifications.responseSpecification;
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_OK;
 
 public class TrackRequests {
-    Specifications specifications = new Specifications();
-
     public Response getTrack(String id) {
-
         return given()
-                .spec(specifications.requestSpecification)
+                    .spec(requestSpecification)
                 .when()
-                .get("/tracks/" + id)
+                    .get("/tracks/" + id)
                 .then()
-                .spec(specifications.responseSpecification)
-                .assertThat().statusCode(200)
+                    .spec(responseSpecification)
+                    .assertThat().statusCode(SC_OK)
                 .extract().response();
     }
 }

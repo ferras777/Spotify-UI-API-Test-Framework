@@ -1,6 +1,6 @@
 package api.utils;
 
-public class Authentixation {
+public class Authentization {
 
     public void authorize() {
 

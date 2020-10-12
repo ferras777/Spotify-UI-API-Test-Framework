@@ -1,28 +1,25 @@
 package api.requests;
 
-import api.specifications.Specifications;
 import io.restassured.response.Response;
 
+import static api.specifications.RequestSpecifications.requestSpecification;
+import static api.specifications.ResponseSpecifications.responseSpecification;
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_OK;
 
 public class SearchTracksRequests {
-
-    Specifications specifications = new Specifications();
-
     public Response searchForTracks(String searchString) {
-
-        //TODO rewrite in bdd style
-        return given()
-                .spec(specifications.requestSpecification)
-                .param("q", searchString)
-                .param("type", "track")
-                .param("limit", 1)
-                .param("market", "RU").
-                        when()
-                .get("/search").
-                        then().
-                        spec(specifications.responseSpecification).
-                        assertThat().statusCode(200).
-                        extract().response();
+        return given().
+                    spec(requestSpecification).
+                    param("q", searchString).
+                    param("type", "track").
+                    param("limit", 1).
+                    param("market", "RU").
+                when().
+                    get("/search").
+                then().
+                    spec(responseSpecification).
+                    assertThat().statusCode(SC_OK).
+                    extract().response();
     }
 }

@@ -27,8 +27,7 @@ public class ArtistTests {
     @Test(threadPoolSize = 30, invocationCount = 3, invocationTimeOut = 1000,
             description = "Check right name of artist", dataProvider = "artists")
     public void checkRightNameOfArtistParallelTest(Artists artist) {
-        ArtistBody response = artistRequests.
-                getAnArtist(artist.getID()).as(ArtistBody.class);
+        ArtistBody response = artistRequests.getArtistBody(artist.getId());
 
         artistAsserts.checkResponseRightName(response, artist);
     }

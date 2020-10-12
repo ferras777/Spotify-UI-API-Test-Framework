@@ -1,28 +1,26 @@
 package api.requests;
 
 import api.bodies.artist.ArtistBody;
-import api.specifications.Specifications;
 import io.restassured.response.Response;
 
+import static api.specifications.RequestSpecifications.requestSpecification;
+import static api.specifications.ResponseSpecifications.responseSpecification;
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_OK;
 
 public class ArtistRequests {
-    Specifications specifications = new Specifications();
-
     public ArtistBody getArtistBody(String id) {
         return getAnArtist(id).as(ArtistBody.class);
     }
 
     public Response getAnArtist(String id) {
-
-        //TODO rewrite in bdd style
         return given()
-                    .spec(specifications.requestSpecification.header("", ""))
+                    .spec(requestSpecification)
                 .when()
-                    .get("/artists/{id}" + id)
+                    .get("/artists/" + id)
                 .then()
-                    .spec(specifications.responseSpecification)
-                    .assertThat().statusCode(200)
-                    .extract().response();
+                    .spec(responseSpecification)
+                    .assertThat().statusCode(SC_OK)
+                .extract().response();
     }
 }

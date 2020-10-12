@@ -8,7 +8,6 @@ import lombok.Setter;
 
 import java.util.List;
 
-//TODO make fields private
 @Getter
 @Setter
 @NoArgsConstructor
@@ -16,41 +15,41 @@ public class ArtistBody {
 
     @SerializedName("external_urls")
     @Expose
-    public ExternalUrls external_urls;
+    private ExternalUrls external_urls;
 
     @SerializedName("followers")
     @Expose
-    public Followers followers;
+    private Followers followers;
 
     @SerializedName("genres")
     @Expose
-    public List<String> genres;
+    private List<String> genres;
 
     @SerializedName("href")
     @Expose
-    public String href;
+    private String href;
 
     @SerializedName("id")
     @Expose
-    public String id;
+    private String id;
 
     @SerializedName("images")
     @Expose
-    public List<Image> images;
+    private List<Image> images;
 
     @SerializedName("name")
     @Expose
-    public String name;
+    private String name;
 
     @SerializedName("popularity")
     @Expose
-    public int popularity;
+    private int popularity;
 
     @SerializedName("type")
     @Expose
-    public String type;
+    private String type;
 
     @SerializedName("uri")
     @Expose
-    public String uri;
+    private String uri;
 }
