@@ -1,4 +1,4 @@
-package api.bodies.track;
+package api.bodies.common;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,17 +7,17 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class Image {
+public class ImageCommonBody {
 
     @SerializedName("height")
     @Expose
-    public Integer height;
+    private Integer height;
 
     @SerializedName("url")
     @Expose
-    public String url;
+    private String url;
 
     @SerializedName("width")
     @Expose
-    public Integer width;
+    private Integer width;
 }

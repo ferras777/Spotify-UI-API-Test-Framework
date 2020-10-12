@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 import static api.enums.Artists.*;
 
-//TODO tix NPE
 public class ArtistTests {
 
     ArtistRequests artistRequests = new ArtistRequests();
@@ -29,6 +28,6 @@ public class ArtistTests {
     public void checkRightNameOfArtistParallelTest(Artists artist) {
         ArtistBody response = artistRequests.getArtistBody(artist.getId());
 
-        artistAsserts.checkResponseRightName(response, artist);
+        artistAsserts.checkResponseRightNameArtist(response, artist);
     }
 }

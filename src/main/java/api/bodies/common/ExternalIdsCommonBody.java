@@ -1,4 +1,4 @@
-package api.bodies.track;
+package api.bodies.common;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,9 +7,9 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class ExternalIds {
+public class ExternalIdsCommonBody {
 
     @SerializedName("isrc")
     @Expose
-    public String isrc;
+    private String isrc;
 }

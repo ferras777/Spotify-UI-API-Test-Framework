@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 
 import static api.utils.Utils.schemaValidation;
 
-//TODO fix tests
 public class SearchTracksTests {
 
     SearchTracksRequests searchTracksRequests = new SearchTracksRequests();

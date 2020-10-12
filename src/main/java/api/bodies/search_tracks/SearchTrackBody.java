@@ -11,5 +11,5 @@ import lombok.Setter;
 public class SearchTrackBody {
 
     @SerializedName("tracks")
-    private Tracks tracks;
+    private TracksBody tracks;
 }

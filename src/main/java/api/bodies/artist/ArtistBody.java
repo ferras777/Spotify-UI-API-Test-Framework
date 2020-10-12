@@ -1,6 +1,7 @@
 package api.bodies.artist;
 
-import com.google.gson.annotations.Expose;
+import api.bodies.common.ExternalUrlsCommonBody;
+import api.bodies.common.ImageCommonBody;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -14,42 +15,32 @@ import java.util.List;
 public class ArtistBody {
 
     @SerializedName("external_urls")
-    @Expose
-    private ExternalUrls external_urls;
+    private ExternalUrlsCommonBody external_urls;
 
     @SerializedName("followers")
-    @Expose
-    private Followers followers;
+    private FollowersBody followers;
 
     @SerializedName("genres")
-    @Expose
     private List<String> genres;
 
     @SerializedName("href")
-    @Expose
     private String href;
 
     @SerializedName("id")
-    @Expose
     private String id;
 
-    @SerializedName("images")
-    @Expose
-    private List<Image> images;
+    @SerializedName("imageBodies")
+    private List<ImageCommonBody> images;
 
     @SerializedName("name")
-    @Expose
     private String name;
 
     @SerializedName("popularity")
-    @Expose
     private int popularity;
 
     @SerializedName("type")
-    @Expose
     private String type;
 
     @SerializedName("uri")
-    @Expose
     private String uri;
 }

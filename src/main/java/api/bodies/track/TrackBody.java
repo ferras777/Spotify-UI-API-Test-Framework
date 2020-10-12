@@ -1,5 +1,9 @@
 package api.bodies.track;
 
+import api.bodies.common.AlbumCommonBody;
+import api.bodies.common.ArtistCommonBody;
+import api.bodies.common.ExternalIdsCommonBody;
+import api.bodies.common.ExternalUrlsCommonBody;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
@@ -13,69 +17,69 @@ public class TrackBody {
 
     @SerializedName("album")
     @Expose
-    public Album album;
+    private AlbumCommonBody album;
 
     @SerializedName("artists")
     @Expose
-    public List<Artist> artists;
+    private List<ArtistCommonBody> artists;
 
     @SerializedName("available_markets")
     @Expose
-    public List<String> available_markets;
+    private List<String> available_markets;
 
     @SerializedName("disc_number")
     @Expose
-    public Integer disc_number;
+    private Integer disc_number;
 
     @SerializedName("duration_ms")
     @Expose
-    public Integer duration_ms;
+    private Integer duration_ms;
 
     @SerializedName("explicit")
     @Expose
-    public Boolean explicit;
+    private Boolean explicit;
 
     @SerializedName("external_ids")
     @Expose
-    public ExternalIds external_ids;
+    private ExternalIdsCommonBody external_ids;
 
     @SerializedName("external_urls")
     @Expose
-    public ExternalUrls external_urls;
+    private ExternalUrlsCommonBody external_urls;
 
     @SerializedName("href")
     @Expose
-    public String href;
+    private String href;
 
     @SerializedName("id")
     @Expose
-    public String id;
+    private String id;
 
     @SerializedName("is_local")
     @Expose
-    public Boolean is_local;
+    private Boolean is_local;
 
     @SerializedName("name")
     @Expose
-    public String name;
+    private String name;
 
     @SerializedName("popularity")
     @Expose
-    public Integer popularity;
+    private Integer popularity;
 
     @SerializedName("preview_url")
     @Expose
-    public String preview_url;
+    private String preview_url;
 
     @SerializedName("track_number")
     @Expose
-    public Integer track_number;
+    private Integer track_number;
 
     @SerializedName("type")
     @Expose
-    public String type;
+    private String type;
 
     @SerializedName("uri")
     @Expose
-    public String uri;
+    private String uri;
 }

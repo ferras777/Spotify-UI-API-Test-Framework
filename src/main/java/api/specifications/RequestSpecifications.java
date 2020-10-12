@@ -1,12 +1,13 @@
 package api.specifications;
 
-import api.utils.Utils;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
+import static api.utils.Authentications.getAccessTokenFromProperties;
+
 public class RequestSpecifications {
-    private static final String token = Utils.getProperty("token");
+    private static final String token = getAccessTokenFromProperties();
 
     public static RequestSpecification requestSpecification = new RequestSpecBuilder()
             .setBaseUri("https://api.spotify.com/v1")

@@ -7,7 +7,7 @@ import static org.testng.Assert.assertEquals;
 
 public class ArtistAsserts {
 
-    public void checkResponseRightName(ArtistBody artistBody, Artists artist) {
+    public void checkResponseRightNameArtist(ArtistBody artistBody, Artists artist) {
         assertEquals(artistBody.getName(), artist.getName(), "Wrong name of artist");
     }
 }

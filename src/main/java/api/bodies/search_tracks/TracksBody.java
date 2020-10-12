@@ -10,26 +10,26 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Tracks {
+public class TracksBody {
 
     @SerializedName("href")
-    public String href;
+    private String href;
 
     @SerializedName("items")
-    public List<Items> items;
+    private List<ItemsBody> items;
 
     @SerializedName("limit")
-    public Integer limit;
+    private Integer limit;
 
     @SerializedName("next")
-    public String next;
+    private String next;
 
     @SerializedName("offset")
-    public Integer offset;
+    private Integer offset;
 
     @SerializedName("previous")
-    public Object previous;
+    private Object previous;
 
     @SerializedName("total")
-    public Integer total;
+    private Integer total;
 }

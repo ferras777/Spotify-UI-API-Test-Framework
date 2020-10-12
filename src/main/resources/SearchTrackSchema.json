@@ -80,7 +80,7 @@
             "is_local": false,
             "is_playable": true,
             "name": "Bohemian Rhapsody - 2011 Mix",
-            "popularity": 83,
+            "popularity": 82,
             "preview_url": null,
             "track_number": 11,
             "type": "track",
@@ -88,10 +88,10 @@
           }
         ],
         "limit": 1,
-        "next": "https://api.spotify.com/v1/search?query=bohemian&type=track&market=RU&offset=1&limit=1",
+        "next": null,
         "offset": 0,
         "previous": null,
-        "total": 11385
+        "total": 1
       }
     }
   ],
@@ -179,7 +179,7 @@
               "is_local": false,
               "is_playable": true,
               "name": "Bohemian Rhapsody - 2011 Mix",
-              "popularity": 83,
+              "popularity": 82,
               "preview_url": null,
               "track_number": 11,
               "type": "track",
@@ -187,10 +187,10 @@
             }
           ],
           "limit": 1,
-          "next": "https://api.spotify.com/v1/search?query=bohemian&type=track&market=RU&offset=1&limit=1",
+          "next": null,
           "offset": 0,
           "previous": null,
-          "total": 11385
+          "total": 1
         }
       ],
       "required": [
@@ -291,7 +291,7 @@
                 "is_local": false,
                 "is_playable": true,
                 "name": "Bohemian Rhapsody - 2011 Mix",
-                "popularity": 83,
+                "popularity": 82,
                 "preview_url": null,
                 "track_number": 11,
                 "type": "track",
@@ -380,7 +380,7 @@
                     "is_local": false,
                     "is_playable": true,
                     "name": "Bohemian Rhapsody - 2011 Mix",
-                    "popularity": 83,
+                    "popularity": 82,
                     "preview_url": null,
                     "track_number": 11,
                     "type": "track",
@@ -1086,7 +1086,7 @@
                     "description": "An explanation about the purpose of this instance.",
                     "default": 0,
                     "examples": [
-                      83
+                      82
                     ]
                   },
                   "preview_url": {
@@ -1147,12 +1147,12 @@
         },
         "next": {
           "$id": "#/properties/tracks/properties/next",
-          "type": "string",
+          "type": "null",
           "title": "The next schema",
           "description": "An explanation about the purpose of this instance.",
-          "default": "",
+          "default": null,
           "examples": [
-            "https://api.spotify.com/v1/search?query=bohemian&type=track&market=RU&offset=1&limit=1"
+            null
           ]
         },
         "offset": {
@@ -1182,7 +1182,7 @@
           "description": "An explanation about the purpose of this instance.",
           "default": 0,
           "examples": [
-            11385
+            1
           ]
         }
       },

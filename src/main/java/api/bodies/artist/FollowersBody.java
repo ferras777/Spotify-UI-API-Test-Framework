@@ -4,14 +4,16 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Getter
-@Setter
 @NoArgsConstructor
-public class ExternalUrls {
+public class FollowersBody {
 
-    @SerializedName("spotify")
+    @SerializedName("href")
     @Expose
-    public String spotify;
+    private String href;
+
+    @SerializedName("total")
+    @Expose
+    private int total;
 }
