@@ -1,5 +1,6 @@
 package api.bodies.search_tracks;
 
+import api.bodies.common.CommonBody;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,10 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class TracksBody {
-
-    @SerializedName("href")
-    private String href;
+public class TracksBody extends CommonBody {
 
     @SerializedName("items")
     private List<ItemsBody> items;

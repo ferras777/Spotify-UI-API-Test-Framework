@@ -6,7 +6,7 @@ import api.requests.SearchTracksRequests;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-import static api.utils.Utils.schemaValidation;
+import static api.asserts.SchemaValidationAsserts.schemaValidation;
 
 public class SearchTracksTests {
 

@@ -1,9 +1,6 @@
 package api.bodies.track;
 
-import api.bodies.common.AlbumCommonBody;
-import api.bodies.common.ArtistCommonBody;
-import api.bodies.common.ExternalIdsCommonBody;
-import api.bodies.common.ExternalUrlsCommonBody;
+import api.bodies.common.*;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
@@ -13,7 +10,7 @@ import java.util.List;
 
 @Getter
 @NoArgsConstructor
-public class TrackBody {
+public class TrackBody extends CommonBody {
 
     @SerializedName("album")
     @Expose
@@ -43,33 +40,13 @@ public class TrackBody {
     @Expose
     private ExternalIdsCommonBody external_ids;
 
-    @SerializedName("external_urls")
-    @Expose
-    private ExternalUrlsCommonBody external_urls;
-
-    @SerializedName("href")
-    @Expose
-    private String href;
-
-    @SerializedName("id")
-    @Expose
-    private String id;
-
     @SerializedName("is_local")
     @Expose
     private Boolean is_local;
 
-    @SerializedName("name")
-    @Expose
-    private String name;
-
     @SerializedName("popularity")
     @Expose
     private Integer popularity;
-
-    @SerializedName("preview_url")
-    @Expose
-    private String preview_url;
 
     @SerializedName("track_number")
     @Expose

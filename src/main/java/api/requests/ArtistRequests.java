@@ -9,6 +9,7 @@ import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class ArtistRequests {
+
     public ArtistBody getArtistBody(String id) {
         return getAnArtist(id).as(ArtistBody.class);
     }

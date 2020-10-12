@@ -25,7 +25,7 @@ public class TrackTest {
 
     @Test(description = "Preview download tracks", dataProvider = "tracks")
     public void checksContentTypePreviewTrack(Tracks track) {
-        TrackBody trackBody = trackRequests.getTrack(track.getId()).as(TrackBody.class);
+        TrackBody trackBody = trackRequests.getTrackBody(track.getId());
 
         trackAsserts.checkContentTypeIsAudio(trackBody);
     }
