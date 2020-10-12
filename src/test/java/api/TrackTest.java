@@ -1,6 +1,6 @@
 package api;
 
-import api.asserts.TrackAsserts;
+import api.asserts.TrackAssertions;
 import api.bodies.track.TrackBody;
 import api.enums.Tracks;
 import api.requests.TrackRequests;
@@ -12,7 +12,7 @@ import static api.enums.Tracks.*;
 public class TrackTest {
 
     TrackRequests trackRequests = new TrackRequests();
-    TrackAsserts trackAsserts = new TrackAsserts();
+    TrackAssertions trackAssertions = new TrackAssertions();
 
     @DataProvider(parallel = true)
     public Object[][] tracks() {
@@ -27,6 +27,6 @@ public class TrackTest {
     public void checksContentTypePreviewTrack(Tracks track) {
         TrackBody trackBody = trackRequests.getTrackBody(track.getId());
 
-        trackAsserts.checkContentTypeIsAudio(trackBody);
+        trackAssertions.checkContentTypeIsAudio(trackBody);
     }
 }

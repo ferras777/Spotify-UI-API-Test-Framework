@@ -1,6 +1,6 @@
 package api;
 
-import api.asserts.ArtistAsserts;
+import api.asserts.ArtistAssertions;
 import api.bodies.artist.ArtistBody;
 import api.enums.Artists;
 import api.requests.ArtistRequests;
@@ -12,7 +12,7 @@ import static api.enums.Artists.*;
 public class ArtistTests {
 
     ArtistRequests artistRequests = new ArtistRequests();
-    ArtistAsserts artistAsserts = new ArtistAsserts();
+    ArtistAssertions artistAssertions = new ArtistAssertions();
 
     @DataProvider(parallel = true)
     public Object[][] artists() {
@@ -28,6 +28,6 @@ public class ArtistTests {
     public void checkRightNameOfArtistParallelTest(Artists artist) {
         ArtistBody response = artistRequests.getArtistBody(artist.getId());
 
-        artistAsserts.checkResponseRightNameArtist(response, artist);
+        artistAssertions.checkResponseRightNameArtist(response, artist);
     }
 }

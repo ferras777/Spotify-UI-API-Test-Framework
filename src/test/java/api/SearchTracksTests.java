@@ -1,17 +1,17 @@
 package api;
 
-import api.asserts.SearchTracksAsserts;
+import api.asserts.SearchTracksAssertions;
 import api.bodies.search_tracks.SearchTrackBody;
 import api.requests.SearchTracksRequests;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-import static api.asserts.SchemaValidationAsserts.schemaValidation;
+import static api.asserts.SchemaValidationAssertions.schemaValidation;
 
 public class SearchTracksTests {
 
     SearchTracksRequests searchTracksRequests = new SearchTracksRequests();
-    SearchTracksAsserts searchTracksAsserts = new SearchTracksAsserts();
+    SearchTracksAssertions searchTracksAssertions = new SearchTracksAssertions();
 
     String trackName = "bohemian";
 
@@ -26,6 +26,6 @@ public class SearchTracksTests {
     @Test(description = "Search track", dependsOnMethods = {"searchTrackSchemaValidation"})
     public void searchTrack() {
         SearchTrackBody searchTrackBody = response.as(SearchTrackBody.class);
-        searchTracksAsserts.checkTrackNameContainsSearchString(searchTrackBody, trackName);
+        searchTracksAssertions.checkTrackNameContainsSearchString(searchTrackBody, trackName);
     }
 }

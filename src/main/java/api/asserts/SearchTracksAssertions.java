@@ -5,7 +5,7 @@ import api.bodies.search_tracks.SearchTrackBody;
 
 import static org.testng.Assert.assertTrue;
 
-public class SearchTracksAsserts {
+public class SearchTracksAssertions {
 
     public void checkTrackNameContainsSearchString(SearchTrackBody searchTrackBody, String searchString) {
         for (ItemsBody itemsBody : searchTrackBody.getTracks().getItems())

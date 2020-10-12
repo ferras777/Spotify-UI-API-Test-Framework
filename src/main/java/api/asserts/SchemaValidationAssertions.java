@@ -3,7 +3,7 @@ import io.restassured.response.Response;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
-public class SchemaValidationAsserts {
+public class SchemaValidationAssertions {
 
     public static void schemaValidation(Response response, String nameOfSchema) {
         response.

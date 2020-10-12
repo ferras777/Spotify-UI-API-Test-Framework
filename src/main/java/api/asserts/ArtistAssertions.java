@@ -5,7 +5,7 @@ import api.enums.Artists;
 
 import static org.testng.Assert.assertEquals;
 
-public class ArtistAsserts {
+public class ArtistAssertions {
 
     public void checkResponseRightNameArtist(ArtistBody artistBody, Artists artist) {
         assertEquals(artistBody.getName(), artist.getName(), "Wrong name of artist");

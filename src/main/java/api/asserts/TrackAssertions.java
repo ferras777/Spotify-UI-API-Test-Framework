@@ -5,7 +5,7 @@ import api.bodies.track.TrackBody;
 import static api.utils.Utils.getContentTypeofDownloadFile;
 import static org.testng.Assert.assertEquals;
 
-public class TrackAsserts {
+public class TrackAssertions {
     public void checkContentTypeIsAudio(TrackBody trackBody) {
         String contentType = getContentTypeofDownloadFile(trackBody);
 
