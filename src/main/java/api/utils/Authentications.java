@@ -12,9 +12,12 @@ import static api.utils.Properties.*;
 
 public class Authentications {
 
+    //todo static import
+    //todo why additional method?
+    //todo create refreshing token (e.g. Selenide Waiter)
     public static String getAccessTokenFromProperties() {
         try {
-            Properties.setProperty("token", getAccessTokenAsString());
+            setProperty("token", getAccessTokenAsString());
         } catch (ParseException | SpotifyWebApiException | IOException e) {
             e.printStackTrace();
             System.out.println("Cannot set token property");
@@ -22,6 +25,7 @@ public class Authentications {
         return getProperty("token");
     }
 
+    //todo move constants to the config file
     public static String getAccessTokenAsString() throws ParseException, SpotifyWebApiException, IOException {
         final String clientId = "124994db560e4fc9821d67212382c80c";
         final String clientSecret = "3b26e3633d814400a039cb8c878f2221";

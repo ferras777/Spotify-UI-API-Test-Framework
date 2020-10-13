@@ -9,10 +9,12 @@ import lombok.Setter;
 
 import java.util.List;
 
+//todo check ArtistCommonBody
 @Getter
 @Setter
 @NoArgsConstructor
 public class ArtistBody extends CommonBody {
+
     @SerializedName("followers")
     private FollowersBody followers;
 

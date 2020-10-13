@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+
+//todo use objects instead of primitives
 @Getter
 @NoArgsConstructor
 public class FollowersBody {
@@ -15,5 +17,5 @@ public class FollowersBody {
 
     @SerializedName("total")
     @Expose
-    private int total;
+    private Integer total;
 }

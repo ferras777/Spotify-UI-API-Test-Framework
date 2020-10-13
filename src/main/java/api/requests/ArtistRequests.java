@@ -14,6 +14,7 @@ public class ArtistRequests {
         return getAnArtist(id).as(ArtistBody.class);
     }
 
+    //todo gherkin style
     public Response getAnArtist(String id) {
         return given()
                     .spec(requestSpecification)

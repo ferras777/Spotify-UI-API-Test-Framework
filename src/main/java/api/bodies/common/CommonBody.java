@@ -25,6 +25,7 @@ public class CommonBody implements Body {
     @SerializedName("preview_url")
     private String preview_url;
 
+    //todo what is it?
     @Override
     public String getContentTypeofDownloadFile() {
         return when().

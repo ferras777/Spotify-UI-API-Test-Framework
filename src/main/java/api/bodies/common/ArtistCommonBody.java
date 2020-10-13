@@ -9,6 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ArtistCommonBody {
 
+    //todo implement file engine class
+    //draw.io
+    //xmind
+
     @SerializedName("external_urls")
     @Expose
     private ExternalUrlsCommonBody external_urls;

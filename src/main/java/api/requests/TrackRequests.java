@@ -13,6 +13,8 @@ public class TrackRequests {
         return getTrack(id).as(TrackBody.class);
     }
 
+    //todo gherkin style
+    //todo move status code check in response spec
     public Response getTrack(String id) {
         return given()
                     .spec(requestSpecification)

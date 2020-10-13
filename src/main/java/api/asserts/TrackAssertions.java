@@ -6,8 +6,6 @@ import static org.testng.Assert.assertEquals;
 
 public class TrackAssertions {
     public void checkContentTypeIsAudio(TrackBody trackBody) {
-        String contentType = trackBody.getContentTypeofDownloadFile();
-
-        assertEquals("audio/mpeg", contentType, "Wrong content type");
+        assertEquals("audio/mpeg", trackBody.getContentTypeofDownloadFile(), "Wrong content type");
     }
 }
