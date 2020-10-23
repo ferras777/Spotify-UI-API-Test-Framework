@@ -1,33 +1,35 @@
 package api;
 
-import api.asserts.ArtistAssertions;
 import api.bodies.artist.ArtistBody;
-import api.enums.Artists;
+import api.bodies.json.JsonData;
 import api.requests.ArtistRequests;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static api.enums.Artists.*;
+import java.io.FileNotFoundException;
+
+import static api.asserts.ArtistAssertions.checkResponseRightArtistId;
+import static api.asserts.ArtistAssertions.checkResponseRightArtistName;
+import static api.utils.Json.getArtistsDataFromJson;
 
 public class ArtistTests {
 
     ArtistRequests artistRequests = new ArtistRequests();
-    ArtistAssertions artistAssertions = new ArtistAssertions();
 
     @DataProvider(parallel = true)
-    public Object[][] artists() {
-        return new Object[][]{
-                {PITBULL},
-                {FALLING_IN_REVERSE},
-                {METALLICA}
-        };
+    public Object[][] getDataFromJson() throws FileNotFoundException {
+        return getArtistsDataFromJson();
     }
 
-    @Test(threadPoolSize = 30, invocationCount = 3, invocationTimeOut = 1000,
-            description = "Check right name of artist", dataProvider = "artists")
-    public void checkRightNameOfArtistParallelTest(Artists artist) {
-        ArtistBody response = artistRequests.getArtistBody(artist.getId());
+    @Test(description = "Check right name of artist", dataProvider = "getDataFromJson")
+    public void checkRightNameOfArtist(JsonData jsonData) {
+        ArtistBody artistBody = artistRequests.getArtistBody(jsonData.getId());
 
-        artistAssertions.checkResponseRightNameArtist(response, artist);
+        checkResponseRightArtistName(artistBody, jsonData);
+    }
+
+    @Test(description = "Check right id of artist", dataProvider = "getDataFromJson")
+    public void checkRightIdOfArtist(JsonData jsonData) {
+        checkResponseRightArtistId(artistRequests.getArtistBody(jsonData.getId()), jsonData);
     }
 }

@@ -1,31 +1,79 @@
 package api;
 
-import api.asserts.SearchTracksAssertions;
-import api.bodies.search_tracks.SearchTrackBody;
-import api.requests.SearchTracksRequests;
+import api.bodies.artist.ArtistBody;
+import api.bodies.search.SearchArtistBody;
+import api.bodies.search.SearchTrackBody;
+import api.bodies.track.TrackBody;
+import api.requests.SearchRequests;
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonWriter;
 import io.restassured.response.Response;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static api.asserts.SchemaValidationAssertions.schemaValidation;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
+import java.util.HashMap;
 
 public class SearchTracksTests {
 
-    SearchTracksRequests searchTracksRequests = new SearchTracksRequests();
-    SearchTracksAssertions searchTracksAssertions = new SearchTracksAssertions();
+    SearchRequests searchRequests = new SearchRequests();
 
-    String trackName = "bohemian";
-
-    Response response = searchTracksRequests.
-            searchForTracks(trackName);
-
-    @Test(description = "Search track schema validation")
-    public void searchTrackSchemaValidation() {
-        schemaValidation(response, "SearchTrackSchema.json");
+    @DataProvider
+    public Object[][] searchKeyWords() {
+        return new Object[][]{
+                {"All"},
+                {"Save"},
+                {"Me"}
+        };
     }
 
-    @Test(description = "Search track", dependsOnMethods = {"searchTrackSchemaValidation"})
-    public void searchTrack() {
+    HashMap<String, String> hash = new HashMap<>();
+
+    @Test(description = "Search track", dataProvider = "searchKeyWords")
+    public void searchArtist(String keyword) {
+        Response response = searchRequests.
+                searchForArtist(keyword);
+        SearchArtistBody searchArtistBody = response.as(SearchArtistBody.class);
+        for(ArtistBody artistBody: searchArtistBody.getArtists().getItems()) {
+            hash.put(artistBody.getName(), artistBody.getId());
+        }
+    }
+
+    @Test(description = "Search track", dataProvider = "searchKeyWords", enabled = false)
+    public void searchTrack(String keyword) {
+        Response response = searchRequests.
+                searchForTracks(keyword);
         SearchTrackBody searchTrackBody = response.as(SearchTrackBody.class);
-        searchTracksAssertions.checkTrackNameContainsSearchString(searchTrackBody, trackName);
+        for(TrackBody trackBody: searchTrackBody.getTracks().getItems()) {
+            System.out.println(trackBody.getId());
+            System.out.println(trackBody.getName());
+            hash.put(trackBody.getName(), trackBody.getId());
+        }
+    }
+
+    @Test(description="to json")
+    public void toJson() throws IOException {
+        try (Writer writer = new FileWriter("C:\\Users\\ferra\\IdeaProjects\\test_api\\src\\main\\resources\\artists1" +
+                ".json")) {
+            Gson gson = new Gson();
+            JsonWriter jsonWriter= gson.newJsonWriter(writer);
+
+            jsonWriter.beginObject();
+            jsonWriter.name("tracks");
+            jsonWriter.beginArray();
+            for (String key : hash.keySet()) {
+                String value = hash.get(key);
+                jsonWriter.beginObject();
+                jsonWriter.name("name");
+                jsonWriter.value(key);
+                jsonWriter.name("id");
+                jsonWriter.value(value);
+                jsonWriter.endObject();
+            }
+            jsonWriter.endArray();
+            jsonWriter.endObject();
+        }
     }
 }

@@ -4,8 +4,6 @@ import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import static io.restassured.RestAssured.when;
-
 @Getter
 @NoArgsConstructor
 public class CommonBody implements Body {
@@ -24,14 +22,4 @@ public class CommonBody implements Body {
 
     @SerializedName("preview_url")
     private String preview_url;
-
-    //todo what is it?
-    @Override
-    public String getContentTypeofDownloadFile() {
-        return when().
-                get(getPreview_url()).
-                then().
-                extract().
-                contentType();
-    }
 }

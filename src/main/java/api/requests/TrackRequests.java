@@ -9,12 +9,11 @@ import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class TrackRequests {
+
     public TrackBody getTrackBody(String id) {
         return getTrack(id).as(TrackBody.class);
     }
 
-    //todo gherkin style
-    //todo move status code check in response spec
     public Response getTrack(String id) {
         return given()
                     .spec(requestSpecification)

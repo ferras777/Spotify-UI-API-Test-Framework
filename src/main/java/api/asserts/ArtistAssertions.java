@@ -1,13 +1,26 @@
 package api.asserts;
 
 import api.bodies.artist.ArtistBody;
-import api.enums.Artists;
+import api.bodies.json.JsonData;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 
 import static org.testng.Assert.assertEquals;
 
 public class ArtistAssertions {
 
-    public void checkResponseRightNameArtist(ArtistBody artistBody, Artists artist) {
-        assertEquals(artistBody.getName(), artist.getName(), "Wrong name of artist");
+    public static void checkResponseRightArtistName(ArtistBody artistBody, JsonData jsonData) {
+        assertEquals(artistBody.getName(), jsonData.getName(), "Wrong name of artist");
+    }
+
+    public static void checkResponseRightArtistId(ArtistBody artistBody, JsonData jsonData) {
+        assertEquals(artistBody.getId(), jsonData.getId(), "Wrong id of artist");
+    }
+
+    public static void checkUIRightArtistName(WebDriver driver, ArtistBody artistBody) {
+        driver.get(artistBody.getExternal_urls().getSpotify());
+        String nameOfArtist = driver.findElements(By.cssSelector("h1")).get(1).getText();
+
+        assertEquals(nameOfArtist, artistBody.getName());
     }
 }

@@ -1,5 +1,7 @@
 package api.bodies.track;
 
+import api.bodies.album.AlbumBody;
+import api.bodies.artist.ArtistBody;
 import api.bodies.common.*;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -14,11 +16,11 @@ public class TrackBody extends CommonBody {
 
     @SerializedName("album")
     @Expose
-    private AlbumCommonBody album;
+    private AlbumBody album;
 
     @SerializedName("artists")
     @Expose
-    private List<ArtistCommonBody> artists;
+    private List<ArtistBody> artists;
 
     @SerializedName("available_markets")
     @Expose
@@ -43,6 +45,9 @@ public class TrackBody extends CommonBody {
     @SerializedName("is_local")
     @Expose
     private Boolean is_local;
+
+    @SerializedName("is_playable")
+    private Boolean is_playable;
 
     @SerializedName("popularity")
     @Expose

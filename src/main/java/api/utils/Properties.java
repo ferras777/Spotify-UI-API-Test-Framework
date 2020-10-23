@@ -1,6 +1,5 @@
 package api.utils;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 
 public class Properties {
@@ -13,15 +12,5 @@ public class Properties {
             e.printStackTrace();
         }
         return properties.getProperty(propertyName);
-    }
-
-    public static void setProperty(String key, String value) {
-        java.util.Properties property = new java.util.Properties();
-        property.setProperty(key, value);
-        try (FileWriter output = new FileWriter("src/main/resources/config.properties")) {
-            property.store(output, "These are properties");
-        } catch (IOException e) {
-            System.out.println("Cannot create property");
-        }
     }
 }

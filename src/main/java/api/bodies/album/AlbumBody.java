@@ -1,5 +1,8 @@
-package api.bodies.common;
+package api.bodies.album;
 
+import api.bodies.artist.ArtistBody;
+import api.bodies.common.ExternalUrlsCommonBody;
+import api.bodies.common.ImageCommonBody;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
@@ -9,7 +12,7 @@ import java.util.List;
 
 @Getter
 @NoArgsConstructor
-public class AlbumCommonBody {
+public class AlbumBody {
 
     @SerializedName("album_type")
     @Expose
@@ -17,7 +20,7 @@ public class AlbumCommonBody {
 
     @SerializedName("artists")
     @Expose
-    private List<ArtistCommonBody> artists;
+    private List<ArtistBody> artists;
 
     @SerializedName("available_markets")
     @Expose

@@ -1,5 +1,6 @@
-package api.bodies.search_tracks;
+package api.bodies.search;
 
+import api.bodies.artist.ArtistBody;
 import api.bodies.common.CommonBody;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
@@ -11,10 +12,10 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class TracksBody extends CommonBody {
+public class ArtistsPageBody extends CommonBody {
 
     @SerializedName("items")
-    private List<ItemsBody> items;
+    private List<ArtistBody> items;
 
     @SerializedName("limit")
     private Integer limit;
