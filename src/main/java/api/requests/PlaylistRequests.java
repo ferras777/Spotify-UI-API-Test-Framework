@@ -29,7 +29,7 @@ public class PlaylistRequests {
                     .extract().response();
     }
 
-    public Response getAListOfUserPlaylists() {
+    public Response getListOfUserPlaylists() {
         return given()
                     .spec(requestSpecificationWithSpecificUser)
                 .when()

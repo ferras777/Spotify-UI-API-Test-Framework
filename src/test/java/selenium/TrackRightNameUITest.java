@@ -15,7 +15,7 @@ public class TrackRightNameUITest extends SeleniumBase {
 
     @DataProvider
     public Object[][] tracks() throws FileNotFoundException {
-        return getTracksDataFromJson();
+        return getTracksDataFromJson(1);
     }
 
 

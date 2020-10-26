@@ -13,6 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 public class ArtistBody extends CommonBody {
+
     @SerializedName("followers")
     private FollowersBody followers;
 

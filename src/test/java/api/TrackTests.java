@@ -17,7 +17,7 @@ public class TrackTests {
 
     @DataProvider(parallel = true)
     public Object[][] tracks() throws FileNotFoundException {
-        return getTracksDataFromJson();
+        return getTracksDataFromJson(10);
     }
     
     @Test(description="Check right name of track", dataProvider = "tracks")

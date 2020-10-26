@@ -18,7 +18,7 @@ public class ArtistTests {
 
     @DataProvider(parallel = true)
     public Object[][] getDataFromJson() throws FileNotFoundException {
-        return getArtistsDataFromJson();
+        return getArtistsDataFromJson(10);
     }
 
     @Test(description = "Check right name of artist", dataProvider = "getDataFromJson")
@@ -31,5 +31,10 @@ public class ArtistTests {
     @Test(description = "Check right id of artist", dataProvider = "getDataFromJson")
     public void checkRightIdOfArtist(JsonData jsonData) {
         checkResponseRightArtistId(artistRequests.getArtistBody(jsonData.getId()), jsonData);
+    }
+    
+    @Test(description="Check status code with wrong id of artist")
+    public void checkStatusCodeWithWrongIdOfArtist() {
+        artistRequests.getAnArtistWithWrongId();
     }
 }

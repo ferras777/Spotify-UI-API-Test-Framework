@@ -19,8 +19,8 @@ public class ArtistAssertions {
 
     public static void checkUIRightArtistName(WebDriver driver, ArtistBody artistBody) {
         driver.get(artistBody.getExternal_urls().getSpotify());
-        String nameOfArtist = driver.findElements(By.cssSelector("h1")).get(1).getText();
 
-        assertEquals(nameOfArtist, artistBody.getName());
+        assertEquals(driver.findElements(By.cssSelector("h1")).get(1).getText(),
+                artistBody.getName(), "Wrong artist in page");
     }
 }

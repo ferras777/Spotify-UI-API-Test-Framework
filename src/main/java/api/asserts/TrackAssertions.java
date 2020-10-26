@@ -18,7 +18,7 @@ public class TrackAssertions {
     }
 
     public static void checkResponseRightTrackId(TrackBody trackBody, JsonData jsonData) {
-        assertEquals(trackBody.getId(), jsonData.getId(), "Wrong id of id");
+        assertEquals(trackBody.getId(), jsonData.getId(), "Wrong id of track");
     }
 
     public static void checkUIPageContainsNameOfTrack(WebDriver driver, TrackBody trackBody) {
@@ -33,6 +33,6 @@ public class TrackAssertions {
                 break;
             }
         }
-        assertTrue(isContains);
+        assertTrue(isContains, "Track not exists on page");
     }
 }

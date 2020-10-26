@@ -2,6 +2,7 @@ package api.requests;
 
 import api.bodies.artist.ArtistBody;
 import io.restassured.response.Response;
+import org.apache.http.HttpStatus;
 
 import static api.specifications.RequestSpecifications.requestSpecification;
 import static api.specifications.ResponseSpecifications.responseSpecification;
@@ -23,5 +24,16 @@ public class ArtistRequests {
                     .spec(responseSpecification)
                     .assertThat().statusCode(SC_OK)
                 .extract().response();
+    }
+
+    public Response getAnArtistWithWrongId() {
+        return given()
+                    .spec(requestSpecification)
+                .when()
+                    .get("/artists/asd64as6d5a46s5d4z23xc145")
+                .then()
+                    .spec(responseSpecification)
+                    .assertThat().statusCode(HttpStatus.SC_BAD_REQUEST)
+                    .extract().response();
     }
 }
