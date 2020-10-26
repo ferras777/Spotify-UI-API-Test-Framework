@@ -11,7 +11,7 @@ import static api.asserts.TrackAssertions.checkResponseRightTrackId;
 import static api.asserts.TrackAssertions.checkResponseRightTrackName;
 import static api.utils.Json.getTracksDataFromJson;
 
-public class TrackTest {
+public class TrackTests {
 
     TrackRequests trackRequests = new TrackRequests();
 
