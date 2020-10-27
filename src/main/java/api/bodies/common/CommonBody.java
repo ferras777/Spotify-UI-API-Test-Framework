@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
+//todo delete implements Body
 public class CommonBody implements Body {
 
     @SerializedName("href")

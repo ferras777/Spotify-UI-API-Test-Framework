@@ -16,6 +16,8 @@ public class ArtistRequests {
         return getAnArtist(id).as(ArtistBody.class);
     }
 
+    //todo remove articles from method names
+    //todo gherkin style
     public Response getAnArtist(String id) {
         return given()
                     .spec(requestSpecification)

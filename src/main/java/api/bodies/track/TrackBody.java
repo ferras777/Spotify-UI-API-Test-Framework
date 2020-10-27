@@ -5,6 +5,7 @@ import api.bodies.artist.ArtistBody;
 import api.bodies.common.CommonBody;
 import api.bodies.common.ExternalIdsCommonBody;
 import com.google.gson.annotations.SerializedName;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

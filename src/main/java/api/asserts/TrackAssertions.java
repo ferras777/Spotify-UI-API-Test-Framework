@@ -21,6 +21,7 @@ public class TrackAssertions {
         assertEquals(trackBody.getId(), jsonData.getId(), "Wrong id of track");
     }
 
+    //todo why ui asserts placed in api package?
     public static void checkUIPageContainsNameOfTrack(WebDriver driver, TrackBody trackBody) {
         boolean isContains = false;
         driver.get(trackBody.getExternal_urls().getSpotify());

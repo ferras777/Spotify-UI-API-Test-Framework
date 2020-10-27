@@ -9,10 +9,12 @@ import java.util.concurrent.TimeUnit;
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
+//todo move to src folder
 public abstract class SeleniumBase {
 
     protected WebDriver driver;
 
+    //todo change annotations
     @BeforeMethod
     public void beforeMethod() {
         chromedriver().setup();

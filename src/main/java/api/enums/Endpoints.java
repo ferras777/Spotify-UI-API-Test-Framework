@@ -1,6 +1,9 @@
 package api.enums;
 
 public enum Endpoints {
+
+    //todo move base url to config file
+    //todo make builder for endpoints
     BASE_URL("https://api.spotify.com/v1/"),
     GET_ARTIST("artists/"),
     GET_TRACK("tracks/"),

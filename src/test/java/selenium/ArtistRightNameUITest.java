@@ -14,6 +14,7 @@ public class ArtistRightNameUITest extends SeleniumBase {
 
     ArtistRequests artistRequests = new ArtistRequests();
 
+    //todo fix test
     @DataProvider
     public Object[][] getDataFromJson() throws FileNotFoundException {
         return getArtistsDataFromJson(1);

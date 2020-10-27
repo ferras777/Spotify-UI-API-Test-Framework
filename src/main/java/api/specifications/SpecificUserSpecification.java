@@ -7,6 +7,8 @@ import static api.enums.Endpoints.BASE_URL;
 import static api.utils.Authentications.getAccessTokenWithRefreshToken;
 
 public class SpecificUserSpecification {
+
+    //todo why content type any?
     public static RequestSpecification requestSpecificationWithSpecificUser = new RequestSpecBuilder()
             .setBaseUri(BASE_URL.getPath())
             .setPort(443)

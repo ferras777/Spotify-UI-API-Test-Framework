@@ -20,6 +20,8 @@ public class TrackTests {
         return getTracksDataFromJson(10);
     }
 
+    //todo add logs to tests
+    //todo concat tests to one
     @Test(description = "Check right name of track", dataProvider = "tracks")
     public void checkRightNameOfTrack(JsonData jsonData) {
         checkResponseRightTrackName(trackRequests.getTrackBody(jsonData.getId()), jsonData);

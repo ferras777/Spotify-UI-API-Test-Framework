@@ -16,11 +16,14 @@ public class ArtistTests {
 
     ArtistRequests artistRequests = new ArtistRequests();
 
+    //todo split tests to different classes
     @DataProvider(parallel = true)
     public Object[][] getDataFromJson() throws FileNotFoundException {
         return getArtistsDataFromJson(1);
     }
 
+    //todo add logs to tests
+    //todo concat tests to one
     @Test(description = "Check right name of artist", dataProvider = "getDataFromJson")
     public void checkRightNameOfArtist(JsonData jsonData) {
         ArtistBody artistBody = artistRequests.getArtistBody(jsonData.getId());
@@ -32,7 +35,8 @@ public class ArtistTests {
     public void checkRightIdOfArtist(JsonData jsonData) {
         checkResponseRightArtistId(artistRequests.getArtistBody(jsonData.getId()), jsonData);
     }
-    
+
+    //todo rename test
     @Test(description="Check status code with wrong id of artist")
     public void checkStatusCodeWithWrongIdOfArtist() {
         artistRequests.getAnArtistWithWrongId();

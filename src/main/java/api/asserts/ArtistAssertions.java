@@ -17,6 +17,7 @@ public class ArtistAssertions {
         assertEquals(artistBody.getId(), jsonData.getId(), "Wrong id of artist");
     }
 
+    //todo why ui asserts placed in api package?
     public static void checkUIRightArtistName(WebDriver driver, ArtistBody artistBody) {
         driver.get(artistBody.getExternal_urls().getSpotify());
         assertEquals(driver.findElements(By.cssSelector("h1")).get(1).getText(),

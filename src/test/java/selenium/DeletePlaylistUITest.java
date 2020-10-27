@@ -6,6 +6,7 @@ import selenium.base.SeleniumBase;
 public class DeletePlaylistUITest extends SeleniumBase {
 
     //TODO: complete test
+    //todo page objects
     @Test(description = "Delete playlist UI test")
     public void deletePlaylistUiTest() {
         driver.get("https://open.spotify.com/");

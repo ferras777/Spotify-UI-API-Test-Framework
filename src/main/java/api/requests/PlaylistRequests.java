@@ -25,6 +25,7 @@ public class PlaylistRequests {
         return gson.fromJson(getListOfUserPlaylists().getBody().asString(), PlaylistPageBody.class);
     }
 
+    //todo make class for body (create bodyConstructor body, default bodies)
     public void createPlaylist(String nameOfPlaylist) {
          given()
                     .spec(requestSpecificationWithSpecificUser)
