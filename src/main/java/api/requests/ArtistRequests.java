@@ -2,11 +2,12 @@ package api.requests;
 
 import api.bodies.artist.ArtistBody;
 import io.restassured.response.Response;
-import org.apache.http.HttpStatus;
 
+import static api.enums.Endpoints.GET_ARTIST;
 import static api.specifications.RequestSpecifications.requestSpecification;
 import static api.specifications.ResponseSpecifications.responseSpecification;
 import static io.restassured.RestAssured.given;
+import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
 import static org.apache.http.HttpStatus.SC_OK;
 
 public class ArtistRequests {
@@ -19,7 +20,7 @@ public class ArtistRequests {
         return given()
                     .spec(requestSpecification)
                 .when()
-                    .get("/artists/" + id)
+                    .get(GET_ARTIST + id)
                 .then()
                     .spec(responseSpecification)
                     .assertThat().statusCode(SC_OK)
@@ -30,10 +31,10 @@ public class ArtistRequests {
         return given()
                     .spec(requestSpecification)
                 .when()
-                    .get("/artists/asd64as6d5a46s5d4z23xc145")
+                    .get(GET_ARTIST + "asd64as6d5a46s5d4z23xc145")
                 .then()
                     .spec(responseSpecification)
-                    .assertThat().statusCode(HttpStatus.SC_BAD_REQUEST)
+                    .assertThat().statusCode(SC_BAD_REQUEST)
                     .extract().response();
     }
 }

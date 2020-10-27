@@ -23,11 +23,9 @@ public class TrackAssertions {
 
     public static void checkUIPageContainsNameOfTrack(WebDriver driver, TrackBody trackBody) {
         boolean isContains = false;
-
         driver.get(trackBody.getExternal_urls().getSpotify());
         List<WebElement> listOfTracks = driver.findElements(By.cssSelector("[data-testid=\"tracklist-row\"]"));
-
-        for (WebElement webElement: listOfTracks) {
+        for (WebElement webElement : listOfTracks) {
             if (webElement.getText().contains(trackBody.getName())) {
                 isContains = true;
                 break;

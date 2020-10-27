@@ -19,13 +19,13 @@ public class TrackTests {
     public Object[][] tracks() throws FileNotFoundException {
         return getTracksDataFromJson(10);
     }
-    
-    @Test(description="Check right name of track", dataProvider = "tracks")
+
+    @Test(description = "Check right name of track", dataProvider = "tracks")
     public void checkRightNameOfTrack(JsonData jsonData) {
         checkResponseRightTrackName(trackRequests.getTrackBody(jsonData.getId()), jsonData);
     }
 
-    @Test(description="Check right id of track", dataProvider = "tracks")
+    @Test(description = "Check right id of track", dataProvider = "tracks")
     public void checkRightIdOfTrack(JsonData jsonData) {
         checkResponseRightTrackId(trackRequests.getTrackBody(jsonData.getId()), jsonData);
     }

@@ -19,7 +19,7 @@ public class ArtistRightNameUITest extends SeleniumBase {
         return getArtistsDataFromJson(1);
     }
 
-    @Test(description="Artist right name UI test", dataProvider = "getDataFromJson")
+    @Test(description = "Artist right name UI test", dataProvider = "getDataFromJson")
     public void artistRightNameUiTest(JsonData jsonData) {
         checkUIRightArtistName(driver, artistRequests.getArtistBody(jsonData.getId()));
     }

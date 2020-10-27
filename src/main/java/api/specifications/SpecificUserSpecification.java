@@ -1,18 +1,16 @@
 package api.specifications;
-
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 import static api.enums.Endpoints.BASE_URL;
-import static api.utils.Authentications.getAccessTokenNonSpecificUserAsString;
+import static api.utils.Authentications.getAccessTokenWithRefreshToken;
 
-public class RequestSpecifications {
-
-    public static RequestSpecification requestSpecification = new RequestSpecBuilder()
+public class SpecificUserSpecification {
+    public static RequestSpecification requestSpecificationWithSpecificUser = new RequestSpecBuilder()
             .setBaseUri(BASE_URL.getPath())
             .setPort(443)
-            .addHeader("Authorization", "Bearer " + getAccessTokenNonSpecificUserAsString())
+            .addHeader("Authorization", "Bearer " + getAccessTokenWithRefreshToken())
             .setAccept(ContentType.JSON)
             .setContentType(ContentType.ANY)
             .build();

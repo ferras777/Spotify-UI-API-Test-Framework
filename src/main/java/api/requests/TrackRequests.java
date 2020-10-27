@@ -3,6 +3,7 @@ package api.requests;
 import api.bodies.track.TrackBody;
 import io.restassured.response.Response;
 
+import static api.enums.Endpoints.GET_TRACK;
 import static api.specifications.RequestSpecifications.requestSpecification;
 import static api.specifications.ResponseSpecifications.responseSpecification;
 import static io.restassured.RestAssured.given;
@@ -18,7 +19,7 @@ public class TrackRequests {
         return given()
                     .spec(requestSpecification)
                 .when()
-                    .get("/tracks/" + id)
+                    .get(GET_TRACK + id)
                 .then()
                     .spec(responseSpecification)
                     .assertThat().statusCode(SC_OK)

@@ -1,15 +1,17 @@
 package api;
-import api.bodies.playlist.UserPlaylistsBody;
 import api.requests.PlaylistRequests;
 import org.testng.annotations.Test;
 
+import static api.asserts.PlaylistAssertions.checkIfPlaylistCreatedWithRightName;
+
 public class PlaylistTests {
+
     PlaylistRequests playlistRequests = new PlaylistRequests();
 
-    //TODO: complete tests
-    @Test(description="Create playlist and check if it created")
+    @Test(description = "Create playlist and check if it created")
     public void createPlaylistAndCheckIfItCreated() {
-        playlistRequests.createAPlaylist("First playlist");
-        UserPlaylistsBody userPlaylistsBody= playlistRequests.getListOfUserPlaylists().as(UserPlaylistsBody.class);
+        String name = "first";
+        playlistRequests.createPlaylist(name);
+        checkIfPlaylistCreatedWithRightName(name, playlistRequests.getUserPlaylistsPageBody());
     }
 }

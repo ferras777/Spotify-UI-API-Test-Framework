@@ -18,7 +18,7 @@ public class ArtistTests {
 
     @DataProvider(parallel = true)
     public Object[][] getDataFromJson() throws FileNotFoundException {
-        return getArtistsDataFromJson(10);
+        return getArtistsDataFromJson(1);
     }
 
     @Test(description = "Check right name of artist", dataProvider = "getDataFromJson")

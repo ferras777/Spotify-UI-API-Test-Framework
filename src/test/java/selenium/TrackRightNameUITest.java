@@ -18,10 +18,8 @@ public class TrackRightNameUITest extends SeleniumBase {
         return getTracksDataFromJson(1);
     }
 
-
-    @Test(description="Track right name test", dataProvider = "tracks")
+    @Test(description = "Track right name test", dataProvider = "tracks")
     public void trackRightNameTest(JsonData jsonData) {
-
         checkUIPageContainsNameOfTrack(driver, trackRequests.getTrackBody(jsonData.getId()));
     }
 }
