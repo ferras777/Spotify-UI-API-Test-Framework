@@ -1,14 +1,15 @@
 package api;
 
 import api.bodies.json.JsonData;
+import api.bodies.track.TrackBody;
 import api.requests.TrackRequests;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
 
-import static api.asserts.TrackAssertions.checkResponseRightTrackId;
-import static api.asserts.TrackAssertions.checkResponseRightTrackName;
+import static api.asserts.TrackApiAssertions.checkResponseRightTrackId;
+import static api.asserts.TrackApiAssertions.checkResponseRightTrackName;
 import static api.utils.Json.getTracksDataFromJson;
 
 public class TrackTests {
@@ -20,15 +21,10 @@ public class TrackTests {
         return getTracksDataFromJson(10);
     }
 
-    //todo add logs to tests
-    //todo concat tests to one
-    @Test(description = "Check right name of track", dataProvider = "tracks")
+    @Test(description = "Check right name and id of track", dataProvider = "tracks")
     public void checkRightNameOfTrack(JsonData jsonData) {
-        checkResponseRightTrackName(trackRequests.getTrackBody(jsonData.getId()), jsonData);
-    }
-
-    @Test(description = "Check right id of track", dataProvider = "tracks")
-    public void checkRightIdOfTrack(JsonData jsonData) {
-        checkResponseRightTrackId(trackRequests.getTrackBody(jsonData.getId()), jsonData);
+        TrackBody trackBody = trackRequests.getTrackBody(jsonData.getId());
+        checkResponseRightTrackName(trackBody, jsonData);
+        checkResponseRightTrackId(trackBody, jsonData);
     }
 }

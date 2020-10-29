@@ -2,43 +2,31 @@ package api;
 
 import api.bodies.artist.ArtistBody;
 import api.bodies.json.JsonData;
+import api.listeners.Listener;
 import api.requests.ArtistRequests;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.FileNotFoundException;
 
-import static api.asserts.ArtistAssertions.checkResponseRightArtistId;
-import static api.asserts.ArtistAssertions.checkResponseRightArtistName;
+import static api.asserts.ArtistApiAssertions.*;
 import static api.utils.Json.getArtistsDataFromJson;
 
+@Listeners(Listener.class)
 public class ArtistTests {
 
     ArtistRequests artistRequests = new ArtistRequests();
 
-    //todo split tests to different classes
     @DataProvider(parallel = true)
     public Object[][] getDataFromJson() throws FileNotFoundException {
         return getArtistsDataFromJson(1);
     }
 
-    //todo add logs to tests
-    //todo concat tests to one
-    @Test(description = "Check right name of artist", dataProvider = "getDataFromJson")
-    public void checkRightNameOfArtist(JsonData jsonData) {
+    @Test(description = "Check right name and id of artist", dataProvider = "getDataFromJson")
+    public void checkRightNameAndIdArtist(JsonData jsonData) {
         ArtistBody artistBody = artistRequests.getArtistBody(jsonData.getId());
-
+        checkResponseRightArtistId(artistBody, jsonData);
         checkResponseRightArtistName(artistBody, jsonData);
-    }
-
-    @Test(description = "Check right id of artist", dataProvider = "getDataFromJson")
-    public void checkRightIdOfArtist(JsonData jsonData) {
-        checkResponseRightArtistId(artistRequests.getArtistBody(jsonData.getId()), jsonData);
-    }
-
-    //todo rename test
-    @Test(description="Check status code with wrong id of artist")
-    public void checkStatusCodeWithWrongIdOfArtist() {
-        artistRequests.getAnArtistWithWrongId();
     }
 }

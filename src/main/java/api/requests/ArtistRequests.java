@@ -3,22 +3,20 @@ package api.requests;
 import api.bodies.artist.ArtistBody;
 import io.restassured.response.Response;
 
-import static api.enums.Endpoints.GET_ARTIST;
 import static api.specifications.RequestSpecifications.requestSpecification;
 import static api.specifications.ResponseSpecifications.responseSpecification;
 import static io.restassured.RestAssured.given;
 import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
 import static org.apache.http.HttpStatus.SC_OK;
+import static api.enums.Endpoints.GET_ARTIST;
 
 public class ArtistRequests {
 
     public ArtistBody getArtistBody(String id) {
-        return getAnArtist(id).as(ArtistBody.class);
+        return getArtist(id).as(ArtistBody.class);
     }
 
-    //todo remove articles from method names
-    //todo gherkin style
-    public Response getAnArtist(String id) {
+    public Response getArtist(String id) {
         return given()
                     .spec(requestSpecification)
                 .when()
@@ -26,10 +24,10 @@ public class ArtistRequests {
                 .then()
                     .spec(responseSpecification)
                     .assertThat().statusCode(SC_OK)
-                .extract().response();
+                    .extract().response();
     }
 
-    public Response getAnArtistWithWrongId() {
+    public Response getArtistWithWrongId() {
         return given()
                     .spec(requestSpecification)
                 .when()

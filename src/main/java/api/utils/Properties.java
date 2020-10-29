@@ -14,6 +14,26 @@ public class Properties {
         return properties.getProperty(propertyName);
     }
 
+    public static String getBaseUrl() {
+        java.util.Properties properties = new java.util.Properties();
+        try (FileReader fileReader = new FileReader("src/main/resources/config.properties")) {
+            properties.load(fileReader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return properties.getProperty("baseUrl");
+    }
+
+    public static int getPort() {
+        java.util.Properties properties = new java.util.Properties();
+        try (FileReader fileReader = new FileReader("src/main/resources/config.properties")) {
+            properties.load(fileReader);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return Integer.parseInt(properties.getProperty("port"));
+    }
+
     public static String getRefreshToken() {
         java.util.Properties properties = new java.util.Properties();
         try (FileReader fileReader = new FileReader("src/main/resources/spotify_tokens.properties")) {

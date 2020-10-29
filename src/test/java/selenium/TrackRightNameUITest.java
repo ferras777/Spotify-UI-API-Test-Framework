@@ -1,14 +1,15 @@
 package selenium;
+
 import api.bodies.json.JsonData;
 import api.requests.TrackRequests;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import selenium.base.SeleniumBase;
+import ui.base.selenium.SeleniumBase;
 
 import java.io.FileNotFoundException;
 
-import static api.asserts.TrackAssertions.checkUIPageContainsNameOfTrack;
 import static api.utils.Json.getTracksDataFromJson;
+import static ui.asserts.TrackUIAssertions.checkUIPageContainsNameOfTrack;
 
 public class TrackRightNameUITest extends SeleniumBase {
     TrackRequests trackRequests = new TrackRequests();

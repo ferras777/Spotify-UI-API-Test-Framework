@@ -1,13 +1,11 @@
 package api.bodies.common;
-import api.interfaces.Body;
 import com.google.gson.annotations.SerializedName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-//todo delete implements Body
-public class CommonBody implements Body {
+public class CommonBody {
 
     @SerializedName("href")
     private String href;

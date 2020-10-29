@@ -1,13 +1,13 @@
 package api.asserts;
 
 import api.bodies.artist.ArtistBody;
+import api.bodies.error.ErrorBody;
 import api.bodies.json.JsonData;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import io.restassured.response.Response;
 
 import static org.testng.Assert.assertEquals;
 
-public class ArtistAssertions {
+public class ArtistApiAssertions {
 
     public static void checkResponseRightArtistName(ArtistBody artistBody, JsonData jsonData) {
         assertEquals(artistBody.getName(), jsonData.getName(), "Wrong name of artist");
@@ -17,10 +17,9 @@ public class ArtistAssertions {
         assertEquals(artistBody.getId(), jsonData.getId(), "Wrong id of artist");
     }
 
-    //todo why ui asserts placed in api package?
-    public static void checkUIRightArtistName(WebDriver driver, ArtistBody artistBody) {
-        driver.get(artistBody.getExternal_urls().getSpotify());
-        assertEquals(driver.findElements(By.cssSelector("h1")).get(1).getText(),
-                artistBody.getName(), "Wrong artist in page");
+    public static void checkResponseBodyErrorMessage(Response response) {
+        ErrorBody errorBody = response.getBody().as(ErrorBody.class);
+
+        assertEquals(errorBody.getError().getMessage(), "invalid id", "Wrong message");
     }
 }
