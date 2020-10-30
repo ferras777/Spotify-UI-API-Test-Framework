@@ -49,6 +49,7 @@ public class UserPlaylistsBody extends CommonBody {
     private String primary_color;
 
     @SerializedName("public")
+    @Expose
     private boolean _public;
 
     @SerializedName("snapshot_id")
