@@ -23,7 +23,7 @@ public abstract class SeleniumBase {
     @BeforeMethod
     public void beforeMethod() {
         options = new ChromeOptions();
-//        options.addArguments("--headless");
+        options.addArguments("--headless");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }

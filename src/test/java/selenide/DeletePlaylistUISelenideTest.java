@@ -1,5 +1,8 @@
 package selenide;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.testng.annotations.Test;
 import ui.pages.selenide.WebPlayerPage;
 
@@ -13,7 +16,10 @@ public class DeletePlaylistUISelenideTest {
 
     WebPlayerPage webPlayerPage = new WebPlayerPage();
 
-    @Test(description = "Selenide ui test")
+    @Epic(value = "Плейлист")
+    @Feature(value = "Тесты плейлиста через UI")
+    @Story(value = "Удаление плейлиста через веб плеер")
+    @Test(description = "Delete playlist with selenide in Web Player")
     public void selenideUiTest() {
         open(getBaseUrlWebPlayer());
 
