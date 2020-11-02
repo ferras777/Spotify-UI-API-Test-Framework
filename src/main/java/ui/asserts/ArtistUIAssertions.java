@@ -2,7 +2,7 @@ package ui.asserts;
 
 import api.bodies.artist.ArtistBody;
 import org.openqa.selenium.WebDriver;
-import ui.pages.ArtistPage;
+import ui.pages.selenium.ArtistPage;
 
 import static org.testng.Assert.assertEquals;
 
