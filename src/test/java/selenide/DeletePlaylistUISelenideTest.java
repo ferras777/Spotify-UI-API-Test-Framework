@@ -19,7 +19,7 @@ public class DeletePlaylistUISelenideTest {
     @Epic(value = "Плейлист")
     @Feature(value = "Тесты плейлиста через UI")
     @Story(value = "Удаление плейлиста через веб плеер")
-    @Test(description = "Delete playlist with selenide in Web Player")
+    @Test(description = "Delete playlist with selenide in Web Player", dependsOnGroups = {"createPlaylist"})
     public void selenideUiTest() {
         open(getBaseUrlWebPlayer());
 

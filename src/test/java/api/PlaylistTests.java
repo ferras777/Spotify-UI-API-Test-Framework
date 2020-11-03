@@ -17,7 +17,7 @@ public class PlaylistTests {
     @Feature(value = "Проверка плейлиста через API")
     @Stories(value = {@Story(value = "Создание плейлиста"),
             @Story(value = "Проверка создания плейлиста")})
-    @Test(description = "Create playlist and check if it created")
+    @Test(description = "Create playlist and check if it created", groups = {"createPlaylist"})
     public void createPlaylistAndCheckIfItCreated() {
         String name = "first";
 
