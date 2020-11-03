@@ -5,14 +5,10 @@
         <listener class-name = "api.listeners.Listener" />
     </listeners>
 
-    <test name="ApiTests"   >
+    <test name="Spotify Tests"   >
         <packages>
             <package name="api" />
             <package name="api.negative" />
-        </packages>
-    </test>
-    <test name="UITests">
-        <packages>
             <package name="selenium" />
             <package name="selenide" />
         </packages>
