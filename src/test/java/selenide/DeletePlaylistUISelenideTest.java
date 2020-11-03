@@ -4,6 +4,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.testng.annotations.Test;
+import ui.base.selenide.SelenideBase;
 import ui.pages.selenide.WebPlayerPage;
 
 import static api.utils.Properties.getBaseUrlWebPlayer;
@@ -12,7 +13,7 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 import static ui.asserts.PlaylistUIAssertions.checkPlaylistsListIsEmpty;
 
-public class DeletePlaylistUISelenideTest {
+public class DeletePlaylistUISelenideTest extends SelenideBase {
 
     WebPlayerPage webPlayerPage = new WebPlayerPage();
 

@@ -20,9 +20,8 @@ public class WebPlayerPage {
     private ElementsCollection listOfPlaylist = $$(".RootlistItemPlaylist__text-wrapper");
     private ElementsCollection dropdownMenu = $$(".react-contextmenu--visible > .react-contextmenu-item");
     private SelenideElement dropdownMenuDeleteButton = dropdownMenu.get(2);
-    private ElementsCollection deletePlaylistPopUpButtons = $$(".GenericModal.GenericModal" +
-            "--animated.GenericModal" +
-            "--afterOpen > div > div > button");
+    private ElementsCollection deletePlaylistPopUpButtons = $$("._6804fe72b2d26f73f6085181" +
+            "7886eb67-scss > button");
     private SelenideElement deletePlaylistButton = deletePlaylistPopUpButtons.get(1);
 
     public void enterButtonClick() {
