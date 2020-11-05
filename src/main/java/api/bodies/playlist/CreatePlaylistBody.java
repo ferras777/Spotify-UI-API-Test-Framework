@@ -6,6 +6,7 @@ import lombok.Builder;
 public class CreatePlaylistBody {
 
     //todo refactor fields
+    //todo implement interface
     private final String name;
     @Builder.Default private final String description = "New playlist";
 
