@@ -9,6 +9,8 @@ import io.restassured.specification.RequestSpecification;
 import static api.utils.Authentications.getAccessTokenNonSpecificUserAsString;
 import static api.utils.Properties.getBaseUrl;
 import static api.utils.Properties.getPort;
+import static io.restassured.http.ContentType.JSON;
+import static io.restassured.http.ContentType.TEXT;
 
 public class RequestSpecifications {
 
@@ -16,7 +18,8 @@ public class RequestSpecifications {
             .setBaseUri(getBaseUrl())
             .setPort(getPort())
             .addHeader("Authorization", "Bearer " + getAccessTokenNonSpecificUserAsString())
-            .setAccept(ContentType.JSON)
-            .setContentType(ContentType.TEXT)
-            .build().config(RestAssuredConfig.config().objectMapperConfig(new ObjectMapperConfig()));
+            .setAccept(JSON)
+            .setContentType(TEXT)
+            .build()
+            .config(RestAssuredConfig.config().objectMapperConfig(new ObjectMapperConfig()));
 }

@@ -14,6 +14,7 @@ public class ArtistApiAssertions {
     public static void checkResponseRightArtistName(ArtistBody artistBody, JsonData jsonData) {
         assertEquals(artistBody.getName(), jsonData.getName(), "Wrong name of artist");
     }
+
     @Step
     public static void checkResponseRightArtistId(ArtistBody artistBody, JsonData jsonData) {
         assertEquals(artistBody.getId(), jsonData.getId(), "Wrong id of artist");

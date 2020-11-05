@@ -9,6 +9,7 @@ public class ErrorBody {
     @SerializedName("error")
     private Error error;
 
+    //todo separate to two classes
     @Getter
     public static class Error {
 

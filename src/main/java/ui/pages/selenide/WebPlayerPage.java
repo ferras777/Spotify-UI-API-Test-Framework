@@ -13,6 +13,7 @@ import static com.codeborne.selenide.Selenide.$$;
 @SuppressWarnings("FieldMayBeFinal")
 public class WebPlayerPage {
 
+    //todo implement page factory
     private SelenideElement enterButton = $(By.cssSelector("[data-testid=\"login-button\"]"));
     private SelenideElement loginField = $(By.id("login-username"));
     private SelenideElement passwordField = $(By.id("login-password"));
