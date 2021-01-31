@@ -1,6 +1,7 @@
 ## Spotify
 
 ### Тестирование Spotify с отчетом в Allure
+#### Стэк: Selenide, Rest-assured, Allure, Gson, Lombok
 
 > Проверка создания плейлиста через API, 
 с последующим удалением через Selenide в веб-версии плеера.

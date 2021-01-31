@@ -17,7 +17,6 @@ public class DeletePlaylistUISelenideTest extends SelenideBase {
 
     WebPlayerPage webPlayerPage = new WebPlayerPage();
 
-    //todo add site plugin to pom.xml
     @Epic(value = "Плейлист")
     @Feature(value = "Тесты плейлиста через UI")
     @Story(value = "Удаление плейлиста через веб плеер")
@@ -32,7 +31,5 @@ public class DeletePlaylistUISelenideTest extends SelenideBase {
         webPlayerPage.deletePlaylist();
 
         checkPlaylistsListIsEmpty(webPlayerPage);
-
-        closeWebDriver();
     }
 }
